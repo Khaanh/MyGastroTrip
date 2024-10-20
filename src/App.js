@@ -10,6 +10,6 @@ function App() {
 
 export default App;
 
-// TODO: Reveal wish list
+// TODO: Black&White Reveal wish list
 // TODO: Category: Visited, would like to visit,
 // TODO: List of cafe in different country
