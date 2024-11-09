@@ -1,3 +1,24 @@
 ul {
 	list-style: none;
 }
+
+.list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.list-item {
+	margin: 8px;
+}
+
+.list-btn {
+	font-size: 18px;
+	line-height: 1.25;
+	padding: 4px 8px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: transparent;
+}

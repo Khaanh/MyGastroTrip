@@ -9,12 +9,14 @@ const cities = [
 	"Frankfurt",
 ];
 
-export default function ListOfCities(cities) {
+export default function ListOfCities() {
 	return (
-		<ul>
-			{/* {cities.map((city) => (
-				<li>{city}</li>
-			))} */}
+		<ul className="list">
+			{cities.map((city) => (
+				<li className="list-item">
+					<button className="list-btn">{city}</button>
+				</li>
+			))}
 		</ul>
 	);
 }
