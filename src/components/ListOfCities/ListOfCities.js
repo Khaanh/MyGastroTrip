@@ -9,7 +9,7 @@ const cities = [
 	"Frankfurt",
 ];
 
-export default function ListOfCity(cities) {
+export default function ListOfCities(cities) {
 	return (
 		<ul>
 			{/* {cities.map((city) => (

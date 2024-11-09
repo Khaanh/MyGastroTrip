@@ -1,12 +1,12 @@
 import "./App.css";
-import ListOfCity from "./components/ListOfCity/ListOfCity";
+import ListOfCities from "./components/ListOfCities/ListOfCities";
 
 function App() {
 	return (
 		<div className="App">
 			<div className="container">
 				<h1>My Gastro Trip</h1>
-				<ListOfCity />
+				<ListOfCities />
 			</div>
 		</div>
 	);
