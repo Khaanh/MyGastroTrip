@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./style.css";
+import classNames from "classnames";
 
 const cities = [
 	"München",
@@ -11,13 +12,22 @@ const cities = [
 ];
 
 export default function ListOfCities() {
-	const [isActive, setIsActive] = useState(false);
+	const [activeStatus, setActiveStatus] = useState(false);
+	const activeBtn = classNames({
+		"list-item": true,
+		"is-active": activeStatus,
+	});
 
 	return (
 		<ul className="list">
 			{cities.map((city) => (
 				<li className="list-item">
-					<button className={`list-btn ${isActive ? "" : isActive}`}>
+					<button
+						className={activeBtn}
+						onClick={(e) => {
+							setActiveStatus(!activeStatus);
+						}}
+					>
 						{city}
 					</button>
 				</li>
