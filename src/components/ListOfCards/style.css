@@ -1,0 +1,6 @@
+.card {
+	max-width: 33.333%;
+	width: 100%;
+	border: 2px solid #d35400;
+	border-radius: 6px;
+}
