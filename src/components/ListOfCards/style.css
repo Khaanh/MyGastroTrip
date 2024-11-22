@@ -33,3 +33,19 @@ img {
 .card-pic img {
 	width: 100%;
 }
+
+.card-link {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-link__text {
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.icon-map {
+	font-size: 24px;
+	color: #d35400;
+}
