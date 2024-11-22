@@ -22,3 +22,7 @@ ul {
 	border-radius: 4px;
 	background-color: transparent;
 }
+
+.is-active {
+	border-color: #27ae60;
+}
