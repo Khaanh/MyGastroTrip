@@ -11,9 +11,7 @@ function App() {
 			</div>
 			<main>
 				<div className="container">
-					<ul>
-						<ListOfCards />
-					</ul>
+					<ListOfCards />
 				</div>
 			</main>
 		</div>
