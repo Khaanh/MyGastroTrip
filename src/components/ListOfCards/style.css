@@ -26,12 +26,13 @@ img {
 }
 
 .card-pic {
-	width: 100%;
 	margin: 0 auto;
+	height: 250px;
 }
 
 .card-pic img {
 	width: 100%;
+	object-fit: contain;
 }
 
 .card-link {
