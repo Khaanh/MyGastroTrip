@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./style.css";
-import classNames from "classnames";
 
 const cities = [
 	"München",
@@ -12,35 +11,26 @@ const cities = [
 ];
 
 export default function ListOfCities() {
-	const [activeStatus, setActiveStatus] = useState(false);
-	const handleClick = (e) => {
-		setActiveStatus(!activeStatus);
-		console.log(e.target);
-	};
+	const [selectedCity, setSelectedCity] = useState("");
 
-	// const activeBtn = classNames({
-	// 	"list-item": true,
-	// 	"is-active": activeStatus,
-	// });
+	const handleSelectCity = (e) => {
+		setSelectedCity(
+			e.target.innerText !== selectedCity ? e.target.innerText : ""
+		);
+		// if (selectedCity !== e.target.innerText)
+		// 	setSelectedCity(e.target.innerText);
+	};
 
 	return (
 		<ul className="list">
 			{cities.map((city) => (
 				<li className="list-item">
 					<button
-						className={`list-btn ${activeStatus ? "is-active" : ""}`}
-						onClick={handleClick}
+						onClick={(e) => handleSelectCity(e)}
+						className={`list-btn ${selectedCity ? "is-active" : ""}`}
 					>
 						{city}
 					</button>
-					{/* <button
-						className={activeBtn}
-						onClick={(e) => {
-							setActiveStatus(!activeStatus);
-						}}
-					>
-						{city}
-					</button> */}
 				</li>
 			))}
 		</ul>
