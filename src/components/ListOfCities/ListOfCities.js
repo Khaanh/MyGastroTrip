@@ -1,35 +1,33 @@
 import { useState } from "react";
 import "./style.css";
 
-const cities = [
-	"München",
-	"Augsburg",
-	"Lindau",
-	"Würgzburg",
-	"Stuttgart",
-	"Frankfurt",
+const listOfCities = [
+	{ id: 0, city: "München" },
+	{ id: 1, city: "Augsburg" },
+	{ id: 2, city: "Lindau" },
+	{ id: 3, city: "Würgzburg" },
+	{ id: 4, city: "Stuttgart" },
+	{ id: 5, city: "Frankfurt" },
 ];
 
 export default function ListOfCities() {
 	const [selectedCity, setSelectedCity] = useState("");
 
-	const handleSelectCity = (e) => {
-		setSelectedCity(
-			e.target.innerText !== selectedCity ? e.target.innerText : ""
-		);
-		// if (selectedCity !== e.target.innerText)
-		// 	setSelectedCity(e.target.innerText);
+	const handleCitySelect = (id) => {
+		setSelectedCity(id !== selectedCity ? id : "");
 	};
 
 	return (
 		<ul className="list">
-			{cities.map((city) => (
+			{listOfCities.map((city) => (
 				<li className="list-item">
 					<button
-						onClick={(e) => handleSelectCity(e)}
-						className={`list-btn ${selectedCity ? "is-active" : ""}`}
+						onClick={() => handleCitySelect(city.id)}
+						className={
+							city.id === selectedCity ? "list-btn is-active" : "list-btn"
+						}
 					>
-						{city}
+						{city.city}
 					</button>
 				</li>
 			))}
