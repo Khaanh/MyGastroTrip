@@ -62,8 +62,8 @@ export default function ListOfCards() {
 					<p>
 						<em>{coffee.desc}</em>
 					</p>
-					<p>Cafe rating {coffee.rating}</p>
-					<p>Work time: 8:00 - 16:00</p>
+					<p>My rating {coffee.rating}</p>
+					<p>Hours: 8:00 - 16:00</p>
 					<p>
 						<a href="">web-site.com</a>
 					</p>
