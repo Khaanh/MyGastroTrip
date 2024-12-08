@@ -1,6 +1,7 @@
 import "./App.css";
 import ListOfCards from "./components/ListOfCards/ListOfCards";
 import ListOfCities from "./components/ListOfCities/ListOfCities";
+import SingleCard from "./components/SingleCard/SingleCard";
 
 function App() {
 	return (
@@ -11,7 +12,8 @@ function App() {
 			</div>
 			<main>
 				<div className="container">
-					<ListOfCards />
+					{/* <ListOfCards /> */}
+					<SingleCard />
 				</div>
 			</main>
 		</div>
