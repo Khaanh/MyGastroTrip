@@ -1,16 +1,16 @@
 import { useState } from "react";
 import "./style.css";
 
-const listOfCities = [
-	{ id: 0, city: "München" },
-	{ id: 1, city: "Augsburg" },
-	{ id: 2, city: "Lindau" },
-	{ id: 3, city: "Würgzburg" },
-	{ id: 4, city: "Stuttgart" },
-	{ id: 5, city: "Frankfurt" },
-];
+// const listOfCities = [
+// 	{ id: 0, city: "München" },
+// 	{ id: 1, city: "Augsburg" },
+// 	{ id: 2, city: "Lindau" },
+// 	{ id: 3, city: "Würgzburg" },
+// 	{ id: 4, city: "Stuttgart" },
+// 	{ id: 5, city: "Frankfurt" },
+// ];
 
-export default function ListOfCities() {
+export default function ListOfCities({ listOfLocations }) {
 	const [selectedCity, setSelectedCity] = useState("");
 
 	const handleCitySelect = (id) => {
@@ -19,15 +19,15 @@ export default function ListOfCities() {
 
 	return (
 		<ul className="list">
-			{listOfCities.map((city) => (
+			{listOfLocations.map((location) => (
 				<li className="list-item">
 					<button
-						onClick={() => handleCitySelect(city.id)}
+						onClick={() => handleCitySelect(location.id)}
 						className={
-							city.id === selectedCity ? "list-btn is-active" : "list-btn"
+							location.id === selectedCity ? "list-btn is-active" : "list-btn"
 						}
 					>
-						{city.city}
+						{location.location}
 					</button>
 				</li>
 			))}
