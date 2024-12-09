@@ -1,6 +1,7 @@
 import { BsFillGeoAltFill } from "react-icons/bs";
 import "./style.css";
 import { IconContext } from "react-icons";
+import { useState } from "react";
 
 // const listOfCoffees = [
 // 	{
@@ -61,9 +62,11 @@ import { IconContext } from "react-icons";
 // ];
 
 export default function ListOfCards({ listOfCoffees }) {
+	const [collection, setCollection] = useState(listOfCoffees);
+
 	return (
 		<ul className="card-holder">
-			{listOfCoffees.map((coffee) => (
+			{collection.map((coffee) => (
 				<li
 					className={
 						coffee.revealedStatus ? "card-items revealed-card" : "card-items"

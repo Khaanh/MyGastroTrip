@@ -1,9 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 import ListOfCards from "./components/ListOfCards/ListOfCards";
 import ListOfCities from "./components/ListOfCities/ListOfCities";
 import SingleCard from "./components/SingleCard/SingleCard";
 
-const listOfCoffees = [
+const listOfCoffeesArr = [
 	{
 		id: 0,
 		location: "München",
@@ -19,7 +20,7 @@ const listOfCoffees = [
 		id: 1,
 		location: "Augsburg",
 		name: "Kaffeemanufaktur",
-		desc: "Hallo, ich bin Carina Schneider, den meisten werde ich bereits bekannt sein! Ich freue mich sehr die Kaffeemanufaktur als erfahrene Mitarbeiterin in die Zukunft führen zu dürfen. Zusammen mit meinem Team stellen wir uns den künftigen Herausforderungen und versuchen jeden Tag ein Stückchen besser zu werden! Worte wie Fairness, Genuss, Qualität und Verantwortung sind für mich nicht nur Marketing-Floskeln, sondern gelebte Unternehmenskultur. Als gelernte IHK Wein-Sommelière ist die Welt der Sensorik und des bewussten Geschmacks seit jeher meine Spielwiese. Mit diesen Fähigkeiten kann ich einen wichtigen Teil zum Genuss Ihres Lieblingskaffees beitragen, sowohl bei den beliebten Kaffee-Seminaren, als auch bei der Auswahl der richtigen Bohne für Zuhause. Begleiten Sie uns weiter auf der spannenden Reise durch die Kaffeewelt. Stellen Sie die richtigen Fragen und bleiben Sie stets neugierig, was bei uns in die Tasse kommt! Wir freuen uns darauf! Carina Schneider & das Team der Kaffeemanufaktur",
+		desc: "Hallo, ich bin Carina Schneider, den meisten werde ich bereits bekannt sein! Ich freue mich sehr die Kaffeemanufaktur als erfahrene Mitarbeiterin in die Zukunft führen zu dürfen. Zusammen mit meinem Team stellen wir uns den künftigen Herausforderungen und versuchen jeden Tag ein Stückchen besser zu werden! Worte wie Fairness, Genuss, Qualität und Verantwortung sind für mich nicht nur Marketing-Floskeln, sondern gelebte Unternehmenskultur. Als gelernte IHK Wein-Sommelière ist die Welt der Sensorik und des bewussten Geschmacks seit jeher meine Spielwiese.",
 		img: "./img/kaffeemanufaktur.jpg",
 		rating: 3,
 		geo: "https://www.google.com/maps/dir//Man+Versus+Machine+Coffee+Roasters,+M%C3%BCllerstra%C3%9Fe+23,+80469+M%C3%BCnchen/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x479ddf5e115d6107:0xebd22248be182933?sa=X&ved=1t:57443&ictx=111",
@@ -59,14 +60,34 @@ const listOfCoffees = [
 		address: "Schillerstraße 30-40, 60313 Frankfurt am Main",
 		revealedStatus: true,
 	},
+	{
+		id: 5,
+		location: "Frankfurt",
+		name: "Romiani",
+		desc: "Man vs Machine is a Specialty Coffee Roaster founded in 2014. We are 100% independent from day one. No investors. Just us. We don’t do Robusta. We roast nothing but the highest grade Arabica Coffees (Specialty Grade 80pts.)",
+		img: "./img/Romiani-03.jpg",
+		rating: 4,
+		geo: "https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgkIAhAuGAoYgAQyCQgDEAAYChiABDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEHMjA2ajBqN6gCALACAA&um=1&ie=UTF-8&fb=1&gl=de&sa=X&geocode=KSmm5c-hD71HMZOqRvv7EvDJ&daddr=Schillerstra%C3%9Fe+30-40,+60313+Frankfurt+am+Main",
+		address: "Schillerstraße 30-40, 60313 Frankfurt am Main",
+		revealedStatus: true,
+	},
 ];
 
 function App() {
+	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
+
+	const handleSelectedCity = () => {
+		console.log("onSelectedCity");
+	};
+
 	return (
 		<div className="App">
 			<div className="container">
 				<h1>My Gastro Trip</h1>
-				<ListOfCities listOfLocations={listOfCoffees} />
+				<ListOfCities
+					listOfLocations={listOfCoffees}
+					onSelectedCity={handleSelectedCity}
+				/>
 			</div>
 			<main>
 				<div className="container">
