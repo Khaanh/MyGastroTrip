@@ -76,8 +76,9 @@ const listOfCoffeesArr = [
 function App() {
 	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
 
-	const handleSelectedCity = () => {
-		console.log("onSelectedCity");
+	const handleSelectedCity = (data) => {
+		console.log("handleSelectedCity:", data);
+		setListOfCoffees(listOfCoffees.filter((item) => item.location === data));
 	};
 
 	return (
@@ -85,7 +86,7 @@ function App() {
 			<div className="container">
 				<h1>My Gastro Trip</h1>
 				<ListOfCities
-					listOfLocations={listOfCoffees}
+					listOfCoffees={listOfCoffees}
 					onSelectedCity={handleSelectedCity}
 				/>
 			</div>

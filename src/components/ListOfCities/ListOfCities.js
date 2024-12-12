@@ -1,23 +1,24 @@
 import { useState } from "react";
 import "./style.css";
 
-export default function ListOfCities({ listOfLocations, onSelectedCity }) {
-	const [selectedCity, setSelectedCity] = useState(listOfLocations);
+export default function ListOfCities({ listOfCoffees, onSelectedCity }) {
+	const [selectedCity, setSelectedCity] = useState(listOfCoffees);
 
-	const handleCitySelect = (id) => {
+	const handleCitySelect = (id, location) => {
 		setSelectedCity(id !== selectedCity ? id : "");
+		//
+		onSelectedCity(location);
 	};
 
 	return (
 		<ul className="list">
-			{listOfLocations.map((location) => (
+			{listOfCoffees.map((location) => (
 				<li className="list-item">
 					<button
-						// onClick={() => handleCitySelect(location.id)}
-						onClick={() => onSelectedCity()}
-						className={
-							location.id === selectedCity ? "list-btn is-active" : "list-btn"
-						}
+						onClick={() => handleCitySelect(location.id, location.location)}
+						className={`list-btn ${
+							location.id === selectedCity ? "is-active" : ""
+						}`}
 					>
 						{location.location}
 					</button>
