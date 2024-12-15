@@ -75,10 +75,12 @@ const listOfCoffeesArr = [
 
 function App() {
 	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
-
+	const [filteredGallery, setFilteredGallery] = useState([]);
 	const handleSelectedCity = (data) => {
 		console.log("handleSelectedCity:", data);
-		setListOfCoffees(listOfCoffees.filter((item) => item.location === data));
+		setFilteredGallery(
+			listOfCoffees.filter((item) => (item.location === data ? item : ""))
+		);
 	};
 
 	return (
@@ -92,7 +94,12 @@ function App() {
 			</div>
 			<main>
 				<div className="container">
-					<ListOfCards listOfCoffees={listOfCoffees} />
+					{/* <ListOfCards listOfCoffees={filteredGallery} /> */}
+					{filteredGallery.length ? (
+						<ListOfCards listOfCoffees={filteredGallery} />
+					) : (
+						<ListOfCards listOfCoffees={listOfCoffees} />
+					)}
 					<SingleCard />
 				</div>
 			</main>
