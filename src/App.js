@@ -83,6 +83,10 @@ function App() {
 		);
 	};
 
+	const handleResetCity = () => {
+		setFilteredGallery(listOfCoffees);
+	};
+
 	return (
 		<div className="App">
 			<div className="container">
@@ -90,6 +94,7 @@ function App() {
 				<ListOfCities
 					listOfCoffees={listOfCoffees}
 					onSelectedCity={handleSelectedCity}
+					onResetCity={handleResetCity}
 				/>
 			</div>
 			<main>

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "./style.css";
 
-export default function ListOfCities({ listOfCoffees, onSelectedCity }) {
+export default function ListOfCities({
+	listOfCoffees,
+	onSelectedCity,
+	onResetCity,
+}) {
 	const [selectedCity, setSelectedCity] = useState(listOfCoffees);
 
 	const handleCitySelect = (id, location) => {
@@ -12,6 +16,11 @@ export default function ListOfCities({ listOfCoffees, onSelectedCity }) {
 
 	return (
 		<ul className="list">
+			<li className="list-item">
+				<button className="list-btn" onClick={onResetCity}>
+					All
+				</button>
+			</li>
 			{listOfCoffees.map((location) => (
 				<li className="list-item">
 					<button
