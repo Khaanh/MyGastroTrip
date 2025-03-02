@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import "./App.css";
+
 import ListOfCards from "./components/ListOfCards/ListOfCards";
 import ListOfCities from "./components/ListOfCities/ListOfCities";
 import SingleCard from "./components/SingleCard/SingleCard";
@@ -121,3 +123,5 @@ export default App;
 // TODO: Shared budget with friends
 
 // TODO: ListOfCards component: Every 3-5 sec change pic.
+
+// TODO: Img optimization

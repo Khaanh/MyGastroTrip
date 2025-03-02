@@ -21,6 +21,8 @@ ul {
 	cursor: pointer;
 	border-radius: 4px;
 	background-color: transparent;
+	color: #efefef;
+	/* color: (--light); */
 }
 
 .is-active {
