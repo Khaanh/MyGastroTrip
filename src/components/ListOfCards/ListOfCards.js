@@ -20,16 +20,18 @@ export default function ListOfCards({ listOfCoffees }) {
 					</div>
 					<div className="card-descr">
 						<h1 className="card-title">{coffee.name}</h1>
-						<p>
+						{/* <p>
 							<em>{coffee.desc}</em>
-						</p>
+						</p> */}
 						<p>My rating {coffee.rating}</p>
 						<p>Hours: 8:00 - 16:00</p>
 						<p>
-							<a href="">web-site.com</a>
+							<a href="" target="_blank">
+								web-site.com
+							</a>
 						</p>
 						<div>
-							<a className="card-link" href={coffee.geo}>
+							<a className="card-link" href={coffee.geo} target="_blank">
 								<span className="card-link__text">{coffee.address}</span>
 								<IconContext.Provider value={{ className: "icon-map" }}>
 									<BsFillGeoAltFill />
