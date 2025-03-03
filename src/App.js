@@ -78,6 +78,7 @@ const listOfCoffeesArr = [
 function App() {
 	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
 	const [filteredGallery, setFilteredGallery] = useState([]);
+
 	const handleSelectedCity = (data) => {
 		console.log("handleSelectedCity:", data);
 		setFilteredGallery(
