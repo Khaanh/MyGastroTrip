@@ -23,7 +23,7 @@ img {
 	width: 100%;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #efefef;
+	border-color: var(--light);
 	border-radius: 14px;
 	overflow: hidden;
 	cursor: pointer;

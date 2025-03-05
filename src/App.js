@@ -81,6 +81,7 @@ function App() {
 
 	const handleSelectedCity = (data) => {
 		console.log("handleSelectedCity:", data);
+
 		setFilteredGallery(
 			listOfCoffees.filter((item) => (item.location === data ? item : ""))
 		);

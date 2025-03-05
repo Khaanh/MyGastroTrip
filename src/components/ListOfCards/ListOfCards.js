@@ -7,10 +7,10 @@ export default function ListOfCards({ listOfCoffees }) {
 		<ul className="card-holder">
 			{listOfCoffees.map((coffee) => (
 				<li
+					key={coffee.id}
 					className={
 						coffee.revealedStatus ? "card-items revealed-card" : "card-items"
 					}
-					key={coffee.id}
 				>
 					<div
 						className="card-pic"
