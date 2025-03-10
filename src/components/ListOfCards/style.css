@@ -94,6 +94,7 @@ img {
 	background-color: var(--black);
 	margin: 0;
 	padding: 36px 12px;
+	font-style: italic;
 	position: absolute;
 	bottom: 0;
 	left: 0;
