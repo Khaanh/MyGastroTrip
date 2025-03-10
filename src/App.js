@@ -75,6 +75,15 @@ const listOfCoffeesArr = [
 	},
 ];
 
+const listOfCities = [
+	"München",
+	"Augsburg",
+	"Würgzburg",
+	"Frankfurt",
+	"Stuttgart",
+	"London",
+];
+
 function App() {
 	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
 	const [filteredGallery, setFilteredGallery] = useState([]);
