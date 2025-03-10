@@ -18,7 +18,7 @@ img {
 }
 
 .card-items {
-	max-width: calc(50% - 20px);
+	max-width: calc(33.333% - 20px);
 	margin: 10px;
 	width: 100%;
 	border-width: 2px;
@@ -28,7 +28,7 @@ img {
 	overflow: hidden;
 	cursor: pointer;
 
-	height: 340px;
+	height: 580px;
 	position: relative;
 }
 
@@ -84,6 +84,20 @@ img {
 .card-pic img {
 	width: 100%;
 	object-fit: contain;
+}
+
+.card-pic {
+	position: relative;
+}
+
+.card-title {
+	background-color: var(--black);
+	margin: 0;
+	padding: 36px 12px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .card-link {

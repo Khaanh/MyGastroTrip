@@ -17,9 +17,9 @@ export default function ListOfCards({ listOfCoffees }) {
 						style={{ backgroundImage: `url(${coffee.img})` }}
 					>
 						{/* <img src={coffee.img} alt={coffee.img} /> */}
+						<h1 className="card-title">{coffee.name}</h1>
 					</div>
 					<div className="card-descr">
-						<h1 className="card-title">{coffee.name}</h1>
 						{/* <p>
 							<em>{coffee.desc}</em>
 						</p> */}
