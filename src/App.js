@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-import "./App.css";
-
-import ListOfCards from "./components/ListOfCards/ListOfCards";
-import ListOfCities from "./components/ListOfCities/ListOfCities";
-import SingleCard from "./components/SingleCard/SingleCard";
+// import ListOfCards from "./components/ListOfCards/ListOfCards";
+// import ListOfCities from "./components/ListOfCities/ListOfCities";
+// import SingleCard from "./components/SingleCard/SingleCard";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Product from "./pages/Product";
 
 const listOfCoffeesArr = [
 	{
@@ -84,43 +85,56 @@ const listOfCities = [
 	"London",
 ];
 
+// function App() {
+// 	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
+// 	const [filteredGallery, setFilteredGallery] = useState([]);
+
+// 	const handleSelectedCity = (data) => {
+// 		console.log("handleSelectedCity:", data);
+
+// 		setFilteredGallery(
+// 			listOfCoffees.filter((item) => (item.location === data ? item : ""))
+// 		);
+// 	};
+
+// 	const handleResetCity = () => {
+// 		setFilteredGallery(listOfCoffees);
+// 	};
+
+// 	return (
+// 		<div className="App">
+// 			<div className="container">
+// 				<h1>My Gastro Trip</h1>
+// 				<ListOfCities
+// 					listOfCoffees={listOfCoffees}
+// 					onSelectedCity={handleSelectedCity}
+// 					onResetCity={handleResetCity}
+// 				/>
+// 			</div>
+// 			<main>
+// 				<div className="container">
+// 					{/* <ListOfCards listOfCoffees={filteredGallery} /> */}
+// 					{filteredGallery.length ? (
+// 						<ListOfCards listOfCoffees={filteredGallery} />
+// 					) : (
+// 						<ListOfCards listOfCoffees={listOfCoffees} />
+// 					)}
+// 					<SingleCard />
+// 				</div>
+// 			</main>
+// 		</div>
+// 	);
+// }
+
 function App() {
-	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
-	const [filteredGallery, setFilteredGallery] = useState([]);
-
-	const handleSelectedCity = (data) => {
-		console.log("handleSelectedCity:", data);
-
-		setFilteredGallery(
-			listOfCoffees.filter((item) => (item.location === data ? item : ""))
-		);
-	};
-
-	const handleResetCity = () => {
-		setFilteredGallery(listOfCoffees);
-	};
-
 	return (
-		<div className="App">
-			<div className="container">
-				<h1>My Gastro Trip</h1>
-				<ListOfCities
-					listOfCoffees={listOfCoffees}
-					onSelectedCity={handleSelectedCity}
-					onResetCity={handleResetCity}
-				/>
-			</div>
-			<main>
-				<div className="container">
-					{/* <ListOfCards listOfCoffees={filteredGallery} /> */}
-					{filteredGallery.length ? (
-						<ListOfCards listOfCoffees={filteredGallery} />
-					) : (
-						<ListOfCards listOfCoffees={listOfCoffees} />
-					)}
-					<SingleCard />
-				</div>
-			</main>
+		<div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Homepage />} />
+					<Route path="product" element={<Product />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }
