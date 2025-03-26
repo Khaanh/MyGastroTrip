@@ -6,6 +6,7 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Product from "./pages/Product";
+import Login from "./pages/Login";
 
 const listOfCoffeesArr = [
 	{
@@ -129,12 +130,15 @@ const listOfCities = [
 function App() {
 	return (
 		<div>
-			<BrowserRouter>
-				<Routes>
-					<Route path="/" element={<Homepage />} />
-					<Route path="product" element={<Product />} />
-				</Routes>
-			</BrowserRouter>
+			<main className="container">
+				<BrowserRouter>
+					<Routes>
+						<Route path="/" element={<Homepage />} />
+						<Route path="product" element={<Product />} />
+						<Route path="login" element={<Login />} />
+					</Routes>
+				</BrowserRouter>
+			</main>
 		</div>
 	);
 }
