@@ -2,3 +2,7 @@
 	width: 62px;
 	height: 62px;
 }
+
+:global(ul) {
+	list-style: none;
+}

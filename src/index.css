@@ -27,3 +27,7 @@ code {
 	text-align: center;
 	color: var(--light);
 }
+
+:global(ul) {
+	list-style: none;
+}
