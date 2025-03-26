@@ -134,5 +134,5 @@ export default App;
 // TODO: Shared budget with friends
 
 // TODO: ListOfCards component: Every 3-5 sec change pic.
-
 // TODO: Img optimization
+// TODO: Add Countries also
