@@ -17,4 +17,10 @@
 	background-color: transparent;
 	color: #efefef;
 	border-color: #efefef;
+	transition: all 0.1s ease-in;
+	transform: translateY(0);
+}
+
+.btn:hover {
+	transform: translateY(-3px);
 }
