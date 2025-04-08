@@ -5,6 +5,7 @@ import PageNav from "../components/PageNav";
 
 export default function Homepage() {
 	const [selectedCity, setSelectedCity] = useState();
+
 	const handleSelect = (location) => {
 		setSelectedCity(location);
 	};

@@ -77,22 +77,38 @@ export default function CafeList({ selectedCity }) {
 				{/* Title
 					Rating
 					Descr */}
-				{cafeList
-					.filter((cafe) => cafe.location === selectedCity)
-					.map((cafe) => (
-						<li className={styles.Item}>
-							<a href="#" className={styles.Link}>
-								<div className={styles.Img}>
-									<img src={cafe.img} alt={cafe.img} />
-								</div>
-								<div className={styles.Descr}>
-									<h2 className={styles.Title}>{cafe.title}</h2>
-									<div>My Rating : 5</div>
-									<p className={styles.Intro}>{cafe.desc}</p>
-								</div>
-							</a>
-						</li>
-					))}
+
+				{selectedCity
+					? cafeList
+							.filter((cafe) => cafe.location === selectedCity)
+							.map((cafe) => (
+								<li className={styles.Item} key={cafe.id}>
+									<a href="#" className={styles.Link}>
+										<div className={styles.Img}>
+											<img src={cafe.img} alt={cafe.img} />
+										</div>
+										<div className={styles.Descr}>
+											<h2 className={styles.Title}>{cafe.title}</h2>
+											<div>My Rating : 5</div>
+											<p className={styles.Intro}>{cafe.desc}</p>
+										</div>
+									</a>
+								</li>
+							))
+					: cafeList.map((cafe) => (
+							<li className={styles.Item} key={cafe.id}>
+								<a href="#" className={styles.Link}>
+									<div className={styles.Img}>
+										<img src={cafe.img} alt={cafe.img} />
+									</div>
+									<div className={styles.Descr}>
+										<h2 className={styles.Title}>{cafe.title}</h2>
+										<div>My Rating : 5</div>
+										<p className={styles.Intro}>{cafe.desc}</p>
+									</div>
+								</a>
+							</li>
+					  ))}
 			</ul>
 		</div>
 	);
