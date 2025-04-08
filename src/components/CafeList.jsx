@@ -178,16 +178,16 @@ export default function CafeList() {
 					Descr */}
 				{cafeList.map((cafe) => (
 					<li className={styles.Item}>
-						<a href="#" className={styles.Link}>
-							<div className={styles.Img}>
-								<img src={cafe.img} alt={cafe.img} />
-							</div>
-							<div className={styles.Descr}>
-								<h2 className={styles.Title}>{cafe.title}</h2>
-								<div className={styles.MyRating}>My Rating : 5</div>
-								<p className={styles.Intro}>{cafe.desc}</p>
-							</div>
-						</a>
+						{/* <div className={styles.Holder}> */}
+						<div className={styles.Img}>
+							<img src={cafe.img} alt={cafe.img} />
+						</div>
+						<div className={styles.Descr}>
+							<h2 className={styles.Title}>{cafe.title}</h2>
+							<div className={styles.MyRating}>My Rating : 5</div>
+							<p className={styles.Intro}>{cafe.desc}</p>
+						</div>
+						{/* </div> */}
 					</li>
 				))}
 			</ul>
