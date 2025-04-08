@@ -184,7 +184,7 @@ export default function CafeList() {
 							</div>
 							<div className={styles.Descr}>
 								<h2 className={styles.Title}>{cafe.title}</h2>
-								<div>Rating : 5</div>
+								<div className={styles.MyRating}>My Rating : 5</div>
 								<p className={styles.Intro}>{cafe.desc}</p>
 							</div>
 						</a>

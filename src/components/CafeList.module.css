@@ -20,6 +20,10 @@
 
 .Link {
 	color: #fff;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
 }
 
 .Item:hover .Descr {
@@ -58,27 +62,42 @@
 }
 
 .Descr {
+	display: flex;
+	flex-direction: column;
+
 	position: absolute;
-	bottom: -100px;
+	/* Magic number */
+	bottom: -65%;
+	/* Magic number */
 	left: 0;
 	right: 0;
-	z-index: 10;
+	z-index: 100;
+	height: 100%;
 	background-color: #000;
 	padding: 16px;
-	/* transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+
 	transition: all 0.2s ease-out;
 }
 
 .Title {
-	height: 64px;
+	/* height: 64px; */
 	font-size: 32px;
-	margin: 0 0 8px 0;
+	margin: 0 0 12px 0;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.MyRating {
+	margin-bottom: auto;
 }
 
 .Intro {
 	margin: 0;
+	/* Magic number */
+	height: 210px;
+	/* Magic number */
+	line-height: 1.5;
 	text-align: justify;
-}
-
-.Test {
 }
