@@ -80,7 +80,7 @@
 }
 
 .Title {
-	/* height: 64px; */
+	height: 64px;
 	font-size: 32px;
 	margin: 0 0 12px 0;
 	width: 100%;
@@ -100,4 +100,5 @@
 	/* Magic number */
 	line-height: 1.5;
 	text-align: justify;
+	overflow: hidden;
 }
