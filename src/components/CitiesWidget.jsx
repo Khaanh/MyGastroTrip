@@ -1,11 +1,16 @@
 import styles from "./CitiesWidget.module.css";
 
+/**
+ * ? Should the handleSelect use a boolean type ?
+ */
+
 const listOfCities = Array.from(
 	new Set([
-		"München",
+		// "München",
+		"Munich",
 		"Augsburg",
-		"Würgzburg",
-		"Frankfurt",
+		"Würzburg",
+		"Frankfurt am Main",
 		"Stuttgart",
 		"London",
 		"Ulm",
@@ -13,12 +18,19 @@ const listOfCities = Array.from(
 	])
 );
 
-export default function CitiesWidget() {
+export default function CitiesWidget({ handleSelect }) {
 	return (
 		<ul className={styles.list}>
-			{listOfCities.map((item) => (
-				<li className={styles.listItem} key={item}>
-					<button className={styles.btn}>{item}</button>
+			<li className={styles.listItem}>
+				<button className={styles.btn} onClick={() => handleSelect(false)}>
+					All
+				</button>
+			</li>
+			{listOfCities.map((city) => (
+				<li className={styles.listItem} key={city}>
+					<button className={styles.btn} onClick={() => handleSelect(city)}>
+						{city}
+					</button>
 				</li>
 			))}
 		</ul>
