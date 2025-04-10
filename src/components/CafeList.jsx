@@ -1,5 +1,4 @@
 import styles from "./CafeList.module.css";
-import main from "./Main.module.css";
 
 const cafeList = [
 	{
