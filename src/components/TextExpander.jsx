@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export default function TextExpander() {
 	const [textLength, setTextLength] = useState();
+	const [content, setContent] = useState();
+	const [btn, setBtn] = useState();
 
 	return (
 		<div>
