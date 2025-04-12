@@ -1,4 +1,5 @@
 import styles from "./CafeList.module.css";
+import TextExpander from "./TextExpander";
 
 const cafeList = [
 	{
@@ -72,6 +73,7 @@ const cafeList = [
 export default function CafeList({ selectedCity }) {
 	return (
 		<div>
+			<TextExpander />
 			<ul className={styles.List}>
 				{/* Title
 					Rating

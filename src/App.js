@@ -158,3 +158,4 @@ export default App;
 // TODO: Text expander for cards
 
 // TODO: Star rating
+// TODO: Animate logo
