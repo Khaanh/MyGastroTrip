@@ -75,9 +75,12 @@ export default function CafeList({ selectedCity }) {
 		<div>
 			<TextExpander
 				content={
-					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, consectetur praesentiu Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, consectetur praesentiu Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates,"
+					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, consectetur praesentiu Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, consectetur praesentiu Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates"
 				}
-				textSize={50}
+				expandButtonText={"Read more"}
+				collapseButtonTex={"Show less"}
+				symbols={50}
+				// btnDisabled={false}
 			/>
 			<ul className={styles.List}>
 				{/* Title
@@ -107,7 +110,9 @@ export default function CafeList({ selectedCity }) {
 								<div className={styles.Descr}>
 									<h2 className={styles.Title}>{cafe.title}</h2>
 									<div className={styles.MyRating}>My Rating : 5</div>
-									<p className={styles.Intro}>{cafe.desc}</p>
+									<TextExpander content={cafe.desc} />
+									<div className={styles.Intro}></div>
+									{/* <p className={styles.Intro}>{cafe.desc}</p> */}
 								</div>
 							</li>
 					  ))}
