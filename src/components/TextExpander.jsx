@@ -3,13 +3,14 @@ import styles from "./TextExpander.module.css";
 
 export default function TextExpander({
 	content,
-	symbols = 80,
+	symbols = 8,
 	expandButtonText = "Read more",
 	collapseButtonText = "Show less",
-	btnDisabled = true,
+	btnDisabled = false,
+	expanded = false,
 	// className={" "}
 }) {
-	const [visible, setVisible] = useState(false);
+	const [visible, setVisible] = useState(true);
 	const [text, setText] = useState(content);
 	const convertedText = visible
 		? text.split(" ").slice(0, symbols).join(" ") + "..."
@@ -17,16 +18,17 @@ export default function TextExpander({
 
 	return (
 		<p>
-			<span>{convertedText}</span>
+			{expanded ? text : text.split(" ").slice(0, symbols).join(" ") + "..."}
 
-			{btnDisabled ? (
-				<button
-					className={styles.btnExpander}
-					onClick={() => setVisible(!visible)}
-				>
-					{visible ? expandButtonText : collapseButtonText}
-				</button>
-			) : (
+			<button
+				className={
+					btnDisabled ? `${styles.btnExpander}` : `${styles.btnExpander}`
+				}
+			>
+				{expandButtonText}
+			</button>
+
+			{/* {btnDisabled ? (
 				<button
 					disabled
 					className={styles.btnExpander}
@@ -34,7 +36,14 @@ export default function TextExpander({
 				>
 					{visible ? expandButtonText : collapseButtonText}
 				</button>
-			)}
+			) : (
+				<button
+					className={styles.btnExpander}
+					onClick={() => setVisible(!visible)}
+				>
+					{visible ? expandButtonText : collapseButtonText}
+				</button>
+			)} */}
 		</p>
 	);
 }

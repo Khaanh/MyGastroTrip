@@ -110,8 +110,13 @@ export default function CafeList({ selectedCity }) {
 								<div className={styles.Descr}>
 									<h2 className={styles.Title}>{cafe.title}</h2>
 									<div className={styles.MyRating}>My Rating : 5</div>
-									<TextExpander content={cafe.desc} />
-									<div className={styles.Intro}></div>
+									<TextExpander
+										content={cafe.desc}
+										symbols={80}
+										// btnDisabled={true}
+										// expanded={true}
+									/>
+									{/* <div className={styles.Intro}></div> */}
 									{/* <p className={styles.Intro}>{cafe.desc}</p> */}
 								</div>
 							</li>
