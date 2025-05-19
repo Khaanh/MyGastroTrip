@@ -4,7 +4,7 @@ import styles from "./TextExpander.module.css";
 export default function TextExpander({
 	content,
 	symbols = 8,
-	expandButtonText = "Read more",
+	expandButtonText = "See more",
 	collapseButtonText = "Show less",
 	btnDisabled = false,
 	expanded = false,

@@ -108,8 +108,10 @@ export default function CafeList({ selectedCity }) {
 									<img src={cafe.img} alt={cafe.img} />
 								</div>
 								<div className={styles.Descr}>
-									<h2 className={styles.Title}>{cafe.title}</h2>
-									<div className={styles.MyRating}>My Rating : 5</div>
+									<div className={styles.Inner}>
+										<h2 className={styles.Title}>{cafe.title}</h2>
+										<div className={styles.MyRating}>My Rating : 5</div>
+									</div>
 									<TextExpander
 										content={cafe.desc}
 										symbols={80}
