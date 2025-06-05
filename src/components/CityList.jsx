@@ -1,5 +1,6 @@
 import CityItem from "./CityItem";
 import styles from "./CityList.module.css";
+import Message from "./Message";
 
 /**
  * ? Should the handleSelect use a boolean type ?
@@ -8,20 +9,20 @@ import styles from "./CityList.module.css";
 const listOfCities = Array.from(
 	new Set([
 		// "München",
-		// "Munich",
-		// "Augsburg",
-		// "Würzburg",
-		// "Frankfurt am Main",
-		// "Stuttgart",
-		// "London",
-		// "Ulm",
-		// "Neu-Ulm",
+		"Munich",
+		"Augsburg",
+		"Würzburg",
+		"Frankfurt am Main",
+		"Stuttgart",
+		"London",
+		"Ulm",
+		"Neu-Ulm",
 	])
 );
 
 export default function CityList({ handleSelect }) {
 	if (!listOfCities.length) {
-		return <h1>Add your first city by clicking on the map</h1>;
+		return <Message message={"Add your first city by clicking on the map"} />;
 	}
 	return (
 		<ul className={styles.list}>
