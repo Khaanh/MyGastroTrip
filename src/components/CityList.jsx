@@ -1,4 +1,5 @@
-import styles from "./CitiesWidget.module.css";
+import CityItem from "./CityItem";
+import styles from "./CityList.module.css";
 
 /**
  * ? Should the handleSelect use a boolean type ?
@@ -18,20 +19,23 @@ const listOfCities = Array.from(
 	])
 );
 
-export default function CitiesWidget({ handleSelect }) {
+export default function CityList({ handleSelect }) {
+	if (!listOfCities.length) {
+		alert("Add your first city by clicking on the map/pop-up");
+
+		return <h1>Selector</h1>;
+	}
 	return (
 		<ul className={styles.list}>
-			<li className={styles.listItem}>
+			{/* // Button component to select all cities that will reset the filter */}
+			<li>
 				<button className={styles.btn} onClick={() => handleSelect(false)}>
 					All
 				</button>
 			</li>
+
 			{listOfCities.map((city) => (
-				<li className={styles.listItem} key={city}>
-					<button className={styles.btn} onClick={() => handleSelect(city)}>
-						{city}
-					</button>
-				</li>
+				<CityItem city={city} key={city} handleSelect={handleSelect} />
 			))}
 		</ul>
 	);
