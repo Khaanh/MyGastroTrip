@@ -20,11 +20,6 @@ const listOfCities = Array.from(
 );
 
 export default function CityList({ handleSelect }) {
-	if (!listOfCities.length) {
-		alert("Add your first city by clicking on the map/pop-up");
-
-		return <h1>Selector</h1>;
-	}
 	return (
 		<ul className={styles.list}>
 			{/* // Button component to select all cities that will reset the filter */}
