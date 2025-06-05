@@ -1,0 +1,20 @@
+.listItem {
+	margin: 4px 8px;
+}
+
+.btn {
+	font-size: 18px;
+	line-height: 1.25;
+	padding: 4px 8px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #efefef;
+	border-color: #efefef;
+	transition: all 0.1s ease-in;
+	transform: translateY(0);
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+}

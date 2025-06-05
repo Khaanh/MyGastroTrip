@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CafeList from "../components/CafeList";
-import CitiesWidget from "../components/CitiesWidget";
+import CityList from "../components/CityList";
 import PageNav from "../components/PageNav";
 
 export default function Homepage() {
@@ -13,7 +13,7 @@ export default function Homepage() {
 	return (
 		<div>
 			<PageNav />
-			<CitiesWidget handleSelect={handleSelect} />
+			<CityList handleSelect={handleSelect} />
 			{selectedCity}
 			<CafeList selectedCity={selectedCity} />
 		</div>
