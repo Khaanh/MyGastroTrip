@@ -3,10 +3,8 @@ import styles from "./Logo.module.css";
 
 export default function Logo() {
 	return (
-		<div className={styles.logo}>
-			<Link to="/">
-				<img src="/img/logo.svg" alt="logo coffee beans" />
-			</Link>
-		</div>
+		<Link to="/" className={styles.Logo}>
+			<img src="/img/logo.svg" alt="logo coffee beans" />
+		</Link>
 	);
 }
