@@ -1,0 +1,15 @@
+.Main {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.Container {
+	display: flex;
+	gap: 4px;
+}
+
+.Text {
+	line-height: 1;
+	margin: 0;
+}
