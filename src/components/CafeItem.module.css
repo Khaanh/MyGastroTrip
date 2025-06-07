@@ -1,0 +1,62 @@
+.Item {
+	max-width: calc(32.3333% - 10px);
+	width: 100%;
+	margin: 10px 16px 10px 0;
+	border-radius: 14px;
+	overflow: hidden;
+	position: relative;
+	height: 480px;
+	border: 2px solid #fff;
+}
+
+.Item:hover .Descr {
+	top: 0;
+}
+
+.Item:hover .Img {
+	opacity: 0.35;
+}
+
+.Img {
+	opacity: 1;
+	width: 100%;
+	height: 480px;
+	object-fit: cover;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: all 0.2s ease;
+}
+
+.Img img {
+	width: 100%;
+	height: 480px;
+	object-fit: cover;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.Descr {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 60%;
+	height: 100%;
+	background-color: rgb(0 0 0 / 85%);
+	padding: 16px;
+	transition: all 0.2s ease-out;
+}
+
+.Title {
+	height: 64px;
+	font-size: 32px;
+	margin: 0 0 12px 0;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.Inner {
+	height: 50%;
+	margin-bottom: auto;
+}
