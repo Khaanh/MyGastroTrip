@@ -13,3 +13,10 @@
 	line-height: 1;
 	margin: 0;
 }
+
+.Star {
+	width: 48px;
+	height: 48px;
+	display: block;
+	cursor: pointer;
+}
