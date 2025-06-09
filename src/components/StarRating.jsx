@@ -2,7 +2,8 @@ import { useState } from "react";
 import styles from "./StarRating.module.css";
 
 export default function StarRating({ maxRating = 5 }) {
-	const [rating, setRating] = useState(1);
+	const [rating, setRating] = useState(0);
+	const [tempRating, setTempRating] = useState(0);
 
 	const handleRating = (rating) => {
 		setRating(rating);
@@ -14,19 +15,31 @@ export default function StarRating({ maxRating = 5 }) {
 				{Array.from({ length: maxRating }, (_, i) => (
 					<Star
 						key={i}
+						full={tempRating ? tempRating >= i + 1 : rating >= i + 1}
 						onRate={() => handleRating(i + 1)}
-						full={rating >= i + 1}
+						onHoverIn={() => {
+							setTempRating(i + 1);
+						}}
+						onHoverOut={() => {
+							setTempRating(0);
+						}}
 					/>
 				))}
 			</div>
-			<p className={styles.Text}>{rating || ""}</p>
+			<p className={styles.Text}>{tempRating || rating || ""}</p>
 		</div>
 	);
 }
 
-function Star({ onRate, full }) {
+function Star({ onRate, full, onHoverIn, onHoverOut }) {
 	return (
-		<span role="button" className={styles.Star} onClick={onRate}>
+		<span
+			role="button"
+			className={styles.Star}
+			onClick={onRate}
+			onMouseEnter={onHoverIn}
+			onMouseLeave={onHoverOut}
+		>
 			{full ? (
 				<svg
 					role="button"
@@ -42,7 +55,7 @@ function Star({ onRate, full }) {
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 24 24"
-					stroke="#000"
+					stroke="#fff"
 				>
 					<path
 						strokeLinecap="round"
