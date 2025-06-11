@@ -73,15 +73,6 @@ const cafeList = [
 export default function CafeList({ selectedCity }) {
 	return (
 		<div>
-			<TextExpander
-				content={
-					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, consectetur praesentiu Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates, consectetur praesentiu Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi totam excepturi laudantium? Rem ipsa maiores alias provident dolore ut voluptates"
-				}
-				expandButtonText={"Read more"}
-				collapseButtonTex={"Show less"}
-				symbols={50}
-				// btnDisabled={false}
-			/>
 			<ul className={styles.List}>
 				{/* Title
 					Rating
