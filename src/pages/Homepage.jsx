@@ -3,6 +3,7 @@ import CafeList from "../components/CafeList";
 import CityList from "../components/CityList";
 import PageNav from "../components/PageNav";
 import StarRating from "../components/StarRating";
+import ModalDialog from "../components/ModalDialog";
 
 export default function Homepage() {
 	const [selectedCity, setSelectedCity] = useState();
@@ -22,6 +23,7 @@ export default function Homepage() {
 				maxRating={5}
 				message={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
 			/>
+			<ModalDialog />
 			<CafeList selectedCity={selectedCity} />
 		</div>
 	);
