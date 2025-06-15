@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 // import ListOfCards from "./components/ListOfCards/ListOfCards";
 // import ListOfCities from "./components/ListOfCities/ListOfCities";
 // import SingleCard from "./components/SingleCard/SingleCard";

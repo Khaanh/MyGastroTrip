@@ -18,6 +18,10 @@ export default function Homepage() {
 			{selectedCity}
 
 			<StarRating maxRating={5} />
+			<StarRating
+				maxRating={5}
+				message={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
+			/>
 			<CafeList selectedCity={selectedCity} />
 		</div>
 	);
