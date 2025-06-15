@@ -2,10 +2,14 @@ import styles from "./CafeItem.module.css";
 import TextExpander from "./TextExpander";
 
 export default function CafeItem({ cafe }) {
-	const { id, img, title, desc } = cafe;
+	const { img, title, desc, visited } = cafe;
 
 	return (
-		<li className={styles.Item} key={id}>
+		<li
+			className={`${
+				visited ? styles.Item : `${styles.Item + " " + styles.NotVisited}`
+			}`}
+		>
 			<div className={styles.Img}>
 				<img src={img} alt={img} />
 			</div>

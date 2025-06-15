@@ -60,3 +60,8 @@
 	height: 50%;
 	margin-bottom: auto;
 }
+
+.NotVisited {
+	filter: grayscale(1);
+	opacity: 0.5;
+}

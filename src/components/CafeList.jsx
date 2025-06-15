@@ -66,7 +66,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place/Prufrock+Coffee/@51.5199071,-0.1094542,15z/data=!4m5!3m4!1s0x0:0x77acd66c094aa411!8m2!3d51.5199071!4d-0.1094542",
 		location: "London",
 		address: "23-25 Leather Ln, London EC1N 7TE, Великобритания",
-		visited: true,
+		visited: false,
 	},
 ];
 
