@@ -142,16 +142,3 @@ function App() {
 }
 
 export default App;
-
-// TODO: Black&White Reveal wish list
-// TODO: Category: Visited, would like to visit,
-// TODO: List of cafe in different country
-// TODO: List of landmarks
-// TODO: Shared budget with friends
-// TODO: ListOfCards component: Every 3-5 sec change pic.
-// TODO: Img optimization
-// TODO: Add Countries also
-// TODO: Text expander for cards
-// TODO: Star rating
-// TODO: Animate logo
-// TODO: Dark theme

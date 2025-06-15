@@ -7,3 +7,5 @@ export default function Message({ message }) {
 		</p>
 	);
 }
+
+//TODO: add className for styling
