@@ -26,7 +26,7 @@ const cafeList = [
 	},
 	{
 		id: 2,
-		img: "/img/romiani-03.jpg",
+		img: "/img/romiani-05.jpg",
 		title: "Romiani",
 		desc: "Willkommen bei Romiani Pastry in Frankfurt am Main, wo jeder Bissen eine Geschichte von Liebe und Handwerkskunst erzählt. Unsere exquisiten Gebäckstücke sind darauf ausgelegt, Ihre Sinne zu erfreuen, gefertigt aus Zutaten höchster Qualität und hausgemachten Rezepten, die über Generationen weitergegeben wurden. Jede Kreation wird mit Leidenschaft und Hingabe gemacht, um ein außergewöhnliches Erlebnis zu gewährleisten, das Sie in eine Welt des Genusses und der Tradition entführt. Bei Romiani glauben wir an die Kunst des Backens, bei der jedes Gebäck ein Meisterwerk ist, das von Herzen kommt, um Freude auf Ihren Tisch zu bringen. Entdecken Sie den Geschmack von echter Fürsorge und kulinarischer Exzellenz mit Romiani Pastry und lassen Sie uns Ihre Momente wirklich besonders machen. ꞉)",
 		rating: 5,
