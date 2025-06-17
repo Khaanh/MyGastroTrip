@@ -13,16 +13,11 @@ export default function Homepage() {
 
 	return (
 		<div>
-			<PageNav />
+			<h1>Home page</h1>
+			{/* <PageNav />
 			<CityList handleSelect={handleSelect} />
 			<h1>{selectedCity}</h1>
-
-			{/* <StarRating maxRating={5} /> */}
-			{/* <StarRating
-				maxRating={5}
-				message={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
-			/> */}
-			<CafeList selectedCity={selectedCity} />
+			<CafeList selectedCity={selectedCity} /> */}
 		</div>
 	);
 }
