@@ -1,22 +1,4 @@
-.Main {
-	display: flex;
-	align-items: center;
-	gap: 16px;
-}
-
 .Container {
 	display: flex;
 	gap: 4px;
-}
-
-.Text {
-	line-height: 1;
-	margin: 0;
-}
-
-.Star {
-	width: 48px;
-	height: 48px;
-	display: block;
-	cursor: pointer;
 }

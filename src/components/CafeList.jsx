@@ -1,5 +1,5 @@
+import CafeItem from "./CafeItem";
 import styles from "./CafeList.module.css";
-import TextExpander from "./TextExpander";
 
 const cafeList = [
 	{
@@ -66,7 +66,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place/Prufrock+Coffee/@51.5199071,-0.1094542,15z/data=!4m5!3m4!1s0x0:0x77acd66c094aa411!8m2!3d51.5199071!4d-0.1094542",
 		location: "London",
 		address: "23-25 Leather Ln, London EC1N 7TE, Великобритания",
-		visited: true,
+		visited: false,
 	},
 ];
 
@@ -74,46 +74,12 @@ export default function CafeList({ selectedCity }) {
 	return (
 		<div>
 			<ul className={styles.List}>
-				{/* Title
-					Rating
-					Descr */}
-
 				{selectedCity
 					? cafeList
 							.filter((cafe) => cafe.location === selectedCity)
-							.map((cafe) => (
-								<li className={styles.Item} key={cafe.id}>
-									<div className={styles.Img}>
-										<img src={cafe.img} alt={cafe.img} />
-									</div>
-									<div className={styles.Descr}>
-										<h2 className={styles.Title}>{cafe.title}</h2>
-										<div className={styles.MyRating}>My Rating : 5</div>
-										<p className={styles.Intro}>{cafe.desc}</p>
-									</div>
-								</li>
-							))
-					: cafeList.map((cafe) => (
-							<li className={styles.Item} key={cafe.id}>
-								<div className={styles.Img}>
-									<img src={cafe.img} alt={cafe.img} />
-								</div>
-								<div className={styles.Descr}>
-									<div className={styles.Inner}>
-										<h2 className={styles.Title}>{cafe.title}</h2>
-										<div className={styles.MyRating}>My Rating : 5</div>
-									</div>
-									<TextExpander
-										content={cafe.desc}
-										symbols={80}
-										// btnDisabled={true}
-										// expanded={true}
-									/>
-									{/* <div className={styles.Intro}></div> */}
-									{/* <p className={styles.Intro}>{cafe.desc}</p> */}
-								</div>
-							</li>
-					  ))}
+							.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />) //?
+					: cafeList.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />)}
+				{/**key ?*/}
 			</ul>
 		</div>
 	);
