@@ -1,4 +1,5 @@
 import styles from "./CafeItem.module.css";
+import StarRating from "./StarRating";
 import TextExpander from "./TextExpander";
 
 export default function CafeItem({ cafe }) {
@@ -16,7 +17,9 @@ export default function CafeItem({ cafe }) {
 			<div className={styles.Descr}>
 				<div className={styles.Inner}>
 					<h2 className={styles.Title}>{title}</h2>
-					<div className={styles.MyRating}>My Rating : 5</div>
+					<div className={styles.MyRating}>
+						<StarRating maxRating={5} />
+					</div>
 				</div>
 				<TextExpander
 					content={desc}
