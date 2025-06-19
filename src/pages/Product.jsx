@@ -2,9 +2,9 @@ import PageNav from "../components/PageNav";
 
 export default function Product() {
 	return (
-		<div>
-			<PageNav />
+		<h1>
+			{/* <PageNav /> */}
 			Product
-		</div>
+		</h1>
 	);
 }

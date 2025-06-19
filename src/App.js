@@ -89,20 +89,18 @@ const listOfCities = [
 function App() {
 	return (
 		<div>
-			<main className="container">
-				<BrowserRouter>
-					<Routes>
+			{/* <main className="container"> */}
+			<BrowserRouter>
+				<Routes>
+					<Route element={<AppLayout />}>
 						<Route index element={<Homepage />} />
-
 						<Route path="product" element={<Product />} />
 						<Route path="login" element={<Login />} />
-
-						<Route path="app" element={<AppLayout />}>
-							<Route path="cafeItem/:id" element={<CafeDetails />} />
-						</Route>
-					</Routes>
-				</BrowserRouter>
-			</main>
+						<Route path="/:id" element={<CafeDetails />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
+			{/* </main> */}
 		</div>
 	);
 }

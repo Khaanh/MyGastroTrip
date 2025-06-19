@@ -1,10 +1,8 @@
-import PageNav from "../components/PageNav";
-
 export default function Login() {
 	return (
-		<div>
-			<PageNav />
+		<h1>
+			{/* <PageNav /> */}
 			Login
-		</div>
+		</h1>
 	);
 }

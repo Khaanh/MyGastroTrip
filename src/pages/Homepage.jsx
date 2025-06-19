@@ -13,11 +13,11 @@ export default function Homepage() {
 
 	return (
 		<div>
-			<h1>Home page</h1>
-			{/* <PageNav />
+			{/* <h1>Home page</h1> */}
+
 			<CityList handleSelect={handleSelect} />
 			<h1>{selectedCity}</h1>
-			<CafeList selectedCity={selectedCity} /> */}
+			<CafeList selectedCity={selectedCity} />
 		</div>
 	);
 }
