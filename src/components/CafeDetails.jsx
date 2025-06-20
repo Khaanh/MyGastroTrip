@@ -5,5 +5,5 @@ export default function CafeDetails() {
 	const { id } = useParams();
 	const [searchParams, setSearchParams] = useSearchParams();
 
-	return <div>CafeDetails {id}</div>;
+	return <div>CafeDetails </div>;
 }

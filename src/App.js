@@ -1,12 +1,19 @@
 // import ListOfCards from "./components/ListOfCards/ListOfCards";
 // import ListOfCities from "./components/ListOfCities/ListOfCities";
 // import SingleCard from "./components/SingleCard/SingleCard";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import {
+	BrowserRouter,
+	Route,
+	Router,
+	Routes,
+	Navigate,
+} from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
 import CafeDetails from "./components/CafeDetails";
 import AppLayout from "./components/AppLayout";
+import CafeList from "./components/CafeList";
 
 const listOfCoffeesArr = [
 	{
@@ -88,15 +95,16 @@ const listOfCities = [
 
 function App() {
 	return (
-		<div>
+		<div className="container">
 			{/* <main className="container"> */}
 			<BrowserRouter>
 				<Routes>
-					<Route element={<AppLayout />}>
-						<Route index element={<Homepage />} />
-						<Route path="product" element={<Product />} />
-						<Route path="login" element={<Login />} />
-						<Route path="/:id" element={<CafeDetails />} />
+					<Route index element={<Homepage />} />
+					<Route path="product" element={<Product />} />
+					<Route path="login" element={<Login />} />
+					<Route path="app" element={<AppLayout />}>
+						<Route index element={<Navigate replace to={<CafeList />} />} />
+						<Route path="cafe" element={<CafeDetails />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>

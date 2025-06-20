@@ -13,9 +13,13 @@ export default function AppLayout() {
 	};
 
 	return (
-		<div className={styles.appLayout}>
+		<div>
 			<PageNav />
-			<Outlet />
+			{/* <Outlet /> */}
+
+			<CityList handleSelect={handleSelect} />
+			<h1>{selectedCity}</h1>
+			<CafeList selectedCity={selectedCity} />
 		</div>
 	);
 }
