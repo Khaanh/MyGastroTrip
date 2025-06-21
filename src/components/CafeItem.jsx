@@ -8,7 +8,7 @@ export default function CafeItem({ cafe }) {
 
 	return (
 		<Link
-			to={`${id}`}
+			to={`${id}?title=${title}&desc=${desc}`}
 			className={`${
 				visited ? styles.Item : `${styles.Item + " " + styles.NotVisited}`
 			}`}
