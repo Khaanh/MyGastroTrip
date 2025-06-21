@@ -93,6 +93,15 @@ const listOfCities = [
 	"London",
 ];
 
+// const random = Array.from({ length: 10 }, (_, i) => {
+// 	return i + 1;
+// });
+// console.log(random);
+
+const random = Array.from({ length: 15 }, (_, i) => {
+	return i + 1;
+});
+
 function App() {
 	return (
 		<div className="container">
@@ -103,8 +112,8 @@ function App() {
 					<Route path="product" element={<Product />} />
 					<Route path="login" element={<Login />} />
 					<Route path="app" element={<AppLayout />}>
-						<Route index element={<Navigate replace to={<CafeList />} />} />
-						<Route path="cafe" element={<CafeDetails />} />
+						<Route path="cafeList/:id" element={<CafeDetails />} />
+						<Route path="cafeList" element={<CafeList />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>

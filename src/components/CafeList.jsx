@@ -72,15 +72,14 @@ const cafeList = [
 
 export default function CafeList({ selectedCity }) {
 	return (
-		<div>
+		<>
 			<ul className={styles.List}>
 				{selectedCity
 					? cafeList
 							.filter((cafe) => cafe.location === selectedCity)
 							.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />) //?
 					: cafeList.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />)}
-				{/**key ?*/}
 			</ul>
-		</div>
+		</>
 	);
 }

@@ -1,9 +1,7 @@
+import { useParams } from "react-router-dom";
 import styles from "./CafeDetails.module.css";
-import { useParams, useSearchParams } from "react-router-dom";
 
 export default function CafeDetails() {
 	const { id } = useParams();
-	const [searchParams, setSearchParams] = useSearchParams();
-
-	return <div>CafeDetails </div>;
+	return <h1>CafeDetails {id}</h1>;
 }

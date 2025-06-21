@@ -19,7 +19,7 @@ export default function Homepage() {
 
 			<main className={styles.main}>
 				<button className={styles.btnCTA}>
-					<Link to="/app">Want to add a new spot ?</Link>
+					<Link to="app/cafeList">Want to add a new spot ?</Link>
 				</button>
 			</main>
 			{/* <h1>Home page</h1> */}

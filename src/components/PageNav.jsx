@@ -17,6 +17,10 @@ export default function PageNav() {
 				<li className={styles.menuItems}>
 					<NavLink to="/login">Login</NavLink>
 				</li>
+
+				<li className={styles.menuItems}>
+					<NavLink to="/cafeList">Cafe List</NavLink>
+				</li>
 			</ul>
 		</nav>
 	);

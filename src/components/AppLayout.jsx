@@ -15,11 +15,12 @@ export default function AppLayout() {
 	return (
 		<div>
 			<PageNav />
-			{/* <Outlet /> */}
+			<Outlet />
 
-			<CityList handleSelect={handleSelect} />
-			<h1>{selectedCity}</h1>
-			<CafeList selectedCity={selectedCity} />
+			{/* <CityList handleSelect={handleSelect} /> */}
+			{/* <h1>{selectedCity}</h1> */}
+
+			{/* <CafeList selectedCity={selectedCity} /> */}
 		</div>
 	);
 }
