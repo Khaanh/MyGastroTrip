@@ -105,19 +105,18 @@ const random = Array.from({ length: 15 }, (_, i) => {
 function App() {
 	return (
 		<div className="container">
-			{/* <main className="container"> */}
 			<BrowserRouter>
 				<Routes>
 					<Route index element={<Homepage />} />
 					<Route path="product" element={<Product />} />
 					<Route path="login" element={<Login />} />
 					<Route path="app" element={<AppLayout />}>
-						<Route path="cafeList/:id" element={<CafeDetails />} />
+						<Route index element={<Navigate replace to="cafeList" />} />
 						<Route path="cafeList" element={<CafeList />} />
+						<Route path="cafeList/:id" element={<CafeDetails />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>
-			{/* </main> */}
 		</div>
 	);
 }
