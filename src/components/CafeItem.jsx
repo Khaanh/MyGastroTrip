@@ -4,11 +4,11 @@ import StarRating from "./StarRating";
 import TextExpander from "./TextExpander";
 
 export default function CafeItem({ cafe }) {
-	const { id, img, title, desc, visited } = cafe;
+	const { id, img, title, desc, visited, location, geo, address, phone } = cafe;
 
 	return (
 		<Link
-			to={`${id}?title=${title}&desc=${desc}`}
+			to={`${id}?title=${title}&desc=${desc}&location=${location}&geo=${geo}&address=${address}&phone=${phone}`}
 			className={`${
 				visited ? styles.Item : `${styles.Item + " " + styles.NotVisited}`
 			}`}
