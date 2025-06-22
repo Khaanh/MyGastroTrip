@@ -1,10 +1,19 @@
 // import ListOfCards from "./components/ListOfCards/ListOfCards";
 // import ListOfCities from "./components/ListOfCities/ListOfCities";
 // import SingleCard from "./components/SingleCard/SingleCard";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+	BrowserRouter,
+	Route,
+	Router,
+	Routes,
+	Navigate,
+} from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
+import CafeDetails from "./components/CafeDetails";
+import AppLayout from "./components/AppLayout";
+import CafeList from "./components/CafeList";
 
 const listOfCoffeesArr = [
 	{
@@ -84,59 +93,30 @@ const listOfCities = [
 	"London",
 ];
 
-// function App() {
-// 	const [listOfCoffees, setListOfCoffees] = useState(listOfCoffeesArr);
-// 	const [filteredGallery, setFilteredGallery] = useState([]);
+// const random = Array.from({ length: 10 }, (_, i) => {
+// 	return i + 1;
+// });
+// console.log(random);
 
-// 	const handleSelectedCity = (data) => {
-// 		console.log("handleSelectedCity:", data);
-
-// 		setFilteredGallery(
-// 			listOfCoffees.filter((item) => (item.location === data ? item : ""))
-// 		);
-// 	};
-
-// 	const handleResetCity = () => {
-// 		setFilteredGallery(listOfCoffees);
-// 	};
-
-// 	return (
-// 		<div className="App">
-// 			<div className="container">
-// 				<h1>My Gastro Trip</h1>
-// 				<ListOfCities
-// 					listOfCoffees={listOfCoffees}
-// 					onSelectedCity={handleSelectedCity}
-// 					onResetCity={handleResetCity}
-// 				/>
-// 			</div>
-// 			<main>
-// 				<div className="container">
-// 					{/* <ListOfCards listOfCoffees={filteredGallery} /> */}
-// 					{filteredGallery.length ? (
-// 						<ListOfCards listOfCoffees={filteredGallery} />
-// 					) : (
-// 						<ListOfCards listOfCoffees={listOfCoffees} />
-// 					)}
-// 					<SingleCard />
-// 				</div>
-// 			</main>
-// 		</div>
-// 	);
-// }
+const random = Array.from({ length: 15 }, (_, i) => {
+	return i + 1;
+});
 
 function App() {
 	return (
-		<div>
-			<main className="container">
-				<BrowserRouter>
-					<Routes>
-						<Route path="/" element={<Homepage />} />
-						<Route path="product" element={<Product />} />
-						<Route path="login" element={<Login />} />
-					</Routes>
-				</BrowserRouter>
-			</main>
+		<div className="container">
+			<BrowserRouter>
+				<Routes>
+					<Route index element={<Homepage />} />
+					<Route path="product" element={<Product />} />
+					<Route path="login" element={<Login />} />
+					<Route path="app" element={<AppLayout />}>
+						<Route index element={<Navigate replace to="cafeList" />} />
+						<Route path="cafeList" element={<CafeList />} />
+						<Route path="cafeList/:id" element={<CafeDetails />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }
@@ -148,6 +128,7 @@ export default App;
 // TODO: List of cafe in different country
 // TODO: List of landmarks
 // TODO: Shared budget with friends
+
 // TODO: ListOfCards component: Every 3-5 sec change pic.
 // TODO: Img optimization
 // TODO: Add Countries also

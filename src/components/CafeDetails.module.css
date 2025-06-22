@@ -1,0 +1,31 @@
+.title {
+	margin-bottom: 32px;
+	font-size: 44px;
+	line-height: 1.5;
+}
+
+.wrapper {
+}
+
+.intro {
+	display: flex;
+}
+
+.desc {
+	max-width: 75%;
+	width: 100%;
+}
+
+.desc p {
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+}
+
+.ratingHolder {
+	max-width: 25%;
+	width: 100%;
+	overflow: hidden;
+}
+.rating {
+}

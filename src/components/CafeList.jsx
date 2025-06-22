@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import CafeItem from "./CafeItem";
 import styles from "./CafeList.module.css";
 
@@ -11,6 +12,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place/Kaffee+Manufaktur/@49.7951053,9.9344112,15z/data=!4m5!3m4!1s0x0:0xc0e6a6dc32e0c41a!8m2!3d49.7951053!4d9.9344112",
 		location: "Würzburg",
 		address: "Spiegelstraße 19, 97070 Würzburg",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -22,6 +24,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps?hl=ru&gl=de&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x479ddf5e115d6107:0xebd22248be182933",
 		location: "Munich",
 		address: "Müllerstraße 23 · 089 54847777",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -33,6 +36,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47bd0fa1cfe5a629:0xc9f012fbfb46aa93?sa=X&ved=1t:8290&ictx=111",
 		location: "Frankfurt am Main",
 		address: "Schillerstraße 30-40, 60313 Frankfurt am Main",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -44,6 +48,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47bd0fa1cfe5a629:0xc9f012fbfb46aa93?sa=X&ved=1t:8290&ictx=111",
 		location: "Stuttgart",
 		address: "Maison Karl GmbH Calwer Straße 50 70173 Stuttgart",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -55,6 +60,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47bd0fa1cfe5a629:0xc9f012fbfb46aa93?sa=X&ved=1t:8290&ictx=111",
 		location: "Stuttgart",
 		address: "Pizza Hut",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -66,21 +72,21 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place/Prufrock+Coffee/@51.5199071,-0.1094542,15z/data=!4m5!3m4!1s0x0:0x77acd66c094aa411!8m2!3d51.5199071!4d-0.1094542",
 		location: "London",
 		address: "23-25 Leather Ln, London EC1N 7TE, Великобритания",
+		phone: faker.phone.number({ style: "human" }),
 		visited: false,
 	},
 ];
 
 export default function CafeList({ selectedCity }) {
 	return (
-		<div>
+		<>
 			<ul className={styles.List}>
 				{selectedCity
 					? cafeList
 							.filter((cafe) => cafe.location === selectedCity)
 							.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />) //?
 					: cafeList.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />)}
-				{/**key ?*/}
 			</ul>
-		</div>
+		</>
 	);
 }
