@@ -15,6 +15,20 @@ export default function CafeDetails() {
 	return (
 		<main>
 			<h1 className={styles.title}>{title}</h1>
+			{/* 
+			<ul className={styles.contactList}>
+				<li className={styles.contactItem}>
+					<a className={styles.contactLink} href={`tel:${phone}`}>
+						{phone}
+					</a>
+				</li>
+				<li className={styles.contactItem}>
+					<a className={styles.contactLink} href={`${geo}`}>
+						{address}
+					</a>
+				</li>
+				<li className={styles.contactItem}>Working hours:</li>
+			</ul> */}
 			<div className={styles.wrapper}>
 				<div className={styles.intro}>
 					<div className={styles.desc}>
@@ -60,16 +74,20 @@ export default function CafeDetails() {
 						</div>
 					</div>
 				</div>
-				<div>
-					<h2>Contacts:</h2>
-					<ul>
-						<li>
-							<a href={`tel:${phone}`}>{phone}</a>
+				<div className={styles.contactBlock}>
+					{/* <h2 className={styles.contactTitle}>Contacts:</h2> */}
+					<ul className={styles.contactList}>
+						<li className={styles.contactItem}>
+							<a className={styles.contactLink} href={`tel:${phone}`}>
+								{phone}
+							</a>
 						</li>
-						<li>
-							<a href={`${geo}`}>{address}</a>
+						<li className={styles.contactItem}>
+							<a className={styles.contactLink} href={`${geo}`}>
+								{address}
+							</a>
 						</li>
-						<li>Working hours:</li>
+						<li className={styles.contactItem}>Working hours:</li>
 					</ul>
 				</div>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
