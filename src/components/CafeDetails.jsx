@@ -83,7 +83,7 @@ export default function CafeDetails() {
 							</a>
 						</li>
 						<li className={styles.contactItem}>
-							<a className={styles.contactLink} href={`${geo}`}>
+							<a target="_blank" className={styles.contactLink} href={`${geo}`}>
 								{address}
 							</a>
 						</li>

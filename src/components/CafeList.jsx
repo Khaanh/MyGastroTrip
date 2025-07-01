@@ -23,7 +23,7 @@ const cafeList = [
 		rating: 5,
 		geo: "https://www.google.com/maps?hl=ru&gl=de&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x479ddf5e115d6107:0xebd22248be182933",
 		location: "Munich",
-		address: "Müllerstraße 23 · 089 54847777",
+		address: "Müllerstraße 23",
 		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
