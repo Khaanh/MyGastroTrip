@@ -1,6 +1,7 @@
 import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./CafeDetails.module.css";
-import StarRating from "./StarRating";
+// import StarRating from "./StarRating";
+import AsideRating from "./AsideRating";
 
 export default function CafeDetails() {
 	const { id } = useParams();
@@ -34,9 +35,10 @@ export default function CafeDetails() {
 					<div className={styles.desc}>
 						<p>{desc}</p>
 					</div>
-					<div className={styles.ratingBlock}>
+
+					<AsideRating />
+					{/* <aside className={styles.ratingBlock}>
 						<div className={styles.ratingHolder}>
-							<div>{/* <StarRating /> */}</div>
 
 							<button className={styles.ratingBtnToggle}>
 								<svg
@@ -72,7 +74,7 @@ export default function CafeDetails() {
 								Average: <span>3.5 </span>
 							</div>
 						</div>
-					</div>
+					</aside> */}
 				</div>
 				<div className={styles.contactBlock}>
 					{/* <h2 className={styles.contactTitle}>Contacts:</h2> */}
