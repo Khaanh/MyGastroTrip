@@ -3,6 +3,8 @@ import CafeList from "../components/CafeList";
 import CityList from "../components/CityList";
 import PageNav from "../components/PageNav";
 import StarRating from "../components/StarRating";
+import { Link } from "react-router-dom";
+import styles from "./Homepage.module.css";
 
 export default function Homepage() {
 	const [selectedCity, setSelectedCity] = useState();
@@ -14,15 +16,17 @@ export default function Homepage() {
 	return (
 		<div>
 			<PageNav />
-			<CityList handleSelect={handleSelect} />
-			<h1>{selectedCity}</h1>
 
-			{/* <StarRating maxRating={5} /> */}
-			{/* <StarRating
-				maxRating={5}
-				message={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
-			/> */}
-			<CafeList selectedCity={selectedCity} />
+			<main className={styles.main}>
+				<button className={styles.btnCTA}>
+					<Link to="app">Want to add a new spot ?</Link>
+				</button>
+			</main>
+			{/* <h1>Home page</h1> */}
+
+			{/* <CityList handleSelect={handleSelect} />
+			<h1>{selectedCity}</h1>
+			<CafeList selectedCity={selectedCity} /> */}
 		</div>
 	);
 }
