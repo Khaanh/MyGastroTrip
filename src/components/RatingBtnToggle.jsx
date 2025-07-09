@@ -1,8 +1,11 @@
 import styles from "./RatingBtnToggle.module.css";
 
-export default function RatingBtnToggle() {
+export default function RatingBtnToggle({ handleRatingToggle }) {
 	return (
-		<button className={styles.ratingBtnToggle}>
+		<button
+			className={styles.ratingBtnToggle}
+			onClick={() => handleRatingToggle()}
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
