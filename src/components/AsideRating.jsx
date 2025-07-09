@@ -15,8 +15,8 @@ export default function AsideRating() {
 		<aside
 			className={
 				ratingToggle
-					? `${styles.ratingBlock}`
-					: `${styles.ratingBlock} ${styles.isActive}`
+					? `${styles.ratingSidebar}`
+					: `${styles.ratingSidebar} ${styles.isActive}`
 			}
 		>
 			<RatingBtnToggle handleRatingToggle={handleRatingToggle} />
