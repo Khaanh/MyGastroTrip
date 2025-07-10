@@ -2,6 +2,14 @@ import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./CafeDetails.module.css";
 // import StarRating from "./StarRating";
 import AsideRating from "./AsideRating";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+	Calling02Icon,
+	Location08Icon,
+	TimeQuarter02Icon,
+} from "@hugeicons/core-free-icons";
+import { fa, faker } from "@faker-js/faker";
+import { useState } from "react";
 
 export default function CafeDetails() {
 	const { id } = useParams();
@@ -16,6 +24,16 @@ export default function CafeDetails() {
 	return (
 		<main>
 			<h1 className={styles.title}>{title}</h1>
+
+			<a href={`tel:${phone}`}>
+				<HugeiconsIcon icon={Calling02Icon} size={44} color={"#fff"} />
+			</a>
+			<a href={`${geo}`} target="_blank">
+				<HugeiconsIcon icon={Location08Icon} size={44} color={"#fff"} />
+			</a>
+			<a href="/">
+				<HugeiconsIcon icon={TimeQuarter02Icon} size={44} color={"#fff"} />
+			</a>
 			{/* 
 			<ul className={styles.contactList}>
 				<li className={styles.contactItem}>
