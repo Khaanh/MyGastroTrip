@@ -1,0 +1,22 @@
+.ContactList {
+	display: flex;
+	justify-content: center;
+	margin: 12px;
+}
+
+.ContactItem {
+	margin: 0 12px;
+}
+
+.ContactLink {
+	color: var(--light);
+}
+
+.ContactLink:hover svg {
+	transform: scale(1);
+}
+
+.ContactLink svg {
+	transition: all 0.2s ease-in;
+	transform: scale(1.2);
+}

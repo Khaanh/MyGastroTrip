@@ -2,6 +2,7 @@ import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./CafeDetails.module.css";
 // import StarRating from "./StarRating";
 import AsideRating from "./AsideRating";
+import Contacts from "./Contacts";
 
 export default function CafeDetails() {
 	const { id } = useParams();
@@ -17,15 +18,17 @@ export default function CafeDetails() {
 		<main>
 			<h1 className={styles.title}>{title}</h1>
 
-			<a href={`tel:${phone}`}>
-				{/* <HugeiconsIcon icon={Calling02Icon} size={44} color={"#fff"} /> */}
+			<Contacts geo={geo} phone={phone} />
+
+			{/* <a href={`tel:${phone}`} style={{ color: "#ecf0f1" }}>
+				<PhoneCall size={42} />
 			</a>
-			<a href={`${geo}`} target="_blank">
-				{/* <HugeiconsIcon icon={Location08Icon} size={44} color={"#fff"} /> */}
+			<a href={`${geo}`} target="_blank" style={{ color: "#ecf0f1" }}>
+				<MapPin size={42} />
 			</a>
-			<a href="/">
-				{/* <HugeiconsIcon icon={TimeQuarter02Icon} size={44} color={"#fff"} /> */}
-			</a>
+			<a href="/" style={{ color: "#ecf0f1" }}>
+				<Clock size={42} />
+			</a> */}
 			{/* 
 			<ul className={styles.contactList}>
 				<li className={styles.contactItem}>
