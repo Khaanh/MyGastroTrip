@@ -47,7 +47,7 @@
 	transition: all 0.2s ease-out;
 }
 
-.Title {
+.title {
 	height: 64px;
 	font-size: 32px;
 	margin: 0 0 12px 0;
@@ -57,7 +57,7 @@
 	text-overflow: ellipsis;
 }
 
-.Inner {
+.inner {
 	height: 50%;
 	margin-bottom: auto;
 }
@@ -67,7 +67,18 @@
 	opacity: 0.5;
 }
 
-.MyRating {
+.myRating {
 	display: flex;
 	justify-content: center;
+	width: 100%;
+	height: 34px;
+}
+
+.myRatingScore {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+}
+
+.myRatingScore svg {
 }
