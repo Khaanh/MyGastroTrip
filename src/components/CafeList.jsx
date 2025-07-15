@@ -26,7 +26,7 @@ const cafeList = [
 		address: "Müllerstraße 23",
 		phone: faker.phone.number({ style: "human" }),
 		visited: true,
-		// time: faker.date.betweens
+		// time: faker.date.betweens(),
 	},
 	{
 		id: 2,
