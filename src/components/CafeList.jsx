@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import CafeItem from "./CafeItem";
 import styles from "./CafeList.module.css";
 
@@ -11,6 +12,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place/Kaffee+Manufaktur/@49.7951053,9.9344112,15z/data=!4m5!3m4!1s0x0:0xc0e6a6dc32e0c41a!8m2!3d49.7951053!4d9.9344112",
 		location: "Würzburg",
 		address: "Spiegelstraße 19, 97070 Würzburg",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -19,20 +21,23 @@ const cafeList = [
 		title: "Man vs Machine",
 		desc: "ABOUT MVSM Man vs Machine is a Specialty Coffee Roaster founded in 2014. We are 100% independent from day one. No investors. Just us. We don’t do Robusta. We roast nothing but the highest grade Arabica Coffees (Specialty Grade >80pts.) Our main focus, always is and always will be quality before growth. We are happy to work with some of the finest intl. cafes and bars in the UK, EU and the UAE amongst others. Our coffee is also served in several Michelin starred restaurants and other quality driven places, like offices, restaurants and cafes.",
 		rating: 5,
-		geo: "https://www.google.com/maps?hl=ru&gl=de&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x479ddf5e115d6107:0xebd22248be182933",
+		geo: "https://maps.app.goo.gl/cmduKWMXraRLwbdY6",
 		location: "Munich",
-		address: "Müllerstraße 23 · 089 54847777",
+		address: "Müllerstraße 23",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
+		// time: faker.date.betweens
 	},
 	{
 		id: 2,
-		img: "/img/romiani-02.jpg",
+		img: "/img/roma.jpg",
 		title: "Romiani",
 		desc: "Willkommen bei Romiani Pastry in Frankfurt am Main, wo jeder Bissen eine Geschichte von Liebe und Handwerkskunst erzählt. Unsere exquisiten Gebäckstücke sind darauf ausgelegt, Ihre Sinne zu erfreuen, gefertigt aus Zutaten höchster Qualität und hausgemachten Rezepten, die über Generationen weitergegeben wurden. Jede Kreation wird mit Leidenschaft und Hingabe gemacht, um ein außergewöhnliches Erlebnis zu gewährleisten, das Sie in eine Welt des Genusses und der Tradition entführt. Bei Romiani glauben wir an die Kunst des Backens, bei der jedes Gebäck ein Meisterwerk ist, das von Herzen kommt, um Freude auf Ihren Tisch zu bringen. Entdecken Sie den Geschmack von echter Fürsorge und kulinarischer Exzellenz mit Romiani Pastry und lassen Sie uns Ihre Momente wirklich besonders machen. ꞉)",
 		rating: 5,
 		geo: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47bd0fa1cfe5a629:0xc9f012fbfb46aa93?sa=X&ved=1t:8290&ictx=111",
 		location: "Frankfurt am Main",
 		address: "Schillerstraße 30-40, 60313 Frankfurt am Main",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -44,6 +49,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47bd0fa1cfe5a629:0xc9f012fbfb46aa93?sa=X&ved=1t:8290&ictx=111",
 		location: "Stuttgart",
 		address: "Maison Karl GmbH Calwer Straße 50 70173 Stuttgart",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -55,6 +61,7 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47bd0fa1cfe5a629:0xc9f012fbfb46aa93?sa=X&ved=1t:8290&ictx=111",
 		location: "Stuttgart",
 		address: "Pizza Hut",
+		phone: faker.phone.number({ style: "human" }),
 		visited: true,
 	},
 	{
@@ -66,21 +73,21 @@ const cafeList = [
 		geo: "https://www.google.com/maps/place/Prufrock+Coffee/@51.5199071,-0.1094542,15z/data=!4m5!3m4!1s0x0:0x77acd66c094aa411!8m2!3d51.5199071!4d-0.1094542",
 		location: "London",
 		address: "23-25 Leather Ln, London EC1N 7TE, Великобритания",
+		phone: faker.phone.number({ style: "human" }),
 		visited: false,
 	},
 ];
 
 export default function CafeList({ selectedCity }) {
 	return (
-		<div>
+		<>
 			<ul className={styles.List}>
 				{selectedCity
 					? cafeList
 							.filter((cafe) => cafe.location === selectedCity)
 							.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />) //?
 					: cafeList.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />)}
-				{/**key ?*/}
 			</ul>
-		</div>
+		</>
 	);
 }

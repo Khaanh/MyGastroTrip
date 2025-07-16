@@ -1,5 +1,15 @@
 import { useState } from "react";
 import styles from "./StarRating.module.css";
+import PropsTypes from "prop-types";
+
+StarRating.propsTypes = {
+	maxRating: PropsTypes.number,
+	defaultRating: PropsTypes.number,
+	color: PropsTypes.string,
+	size: PropsTypes.number,
+	message: PropsTypes.array,
+	className: PropsTypes.string,
+};
 
 export default function StarRating({
 	maxRating = 5,
@@ -8,14 +18,14 @@ export default function StarRating({
 	className = "",
 	message = [],
 	defaultRating = 0,
-	onSetRating,
+	// onSetRating,
 }) {
 	const [rating, setRating] = useState(defaultRating);
 	const [tempRating, setTempRating] = useState(0);
 
 	const handleRating = (rating) => {
 		setRating(rating);
-		onSetRating(rating);
+		// onSetRating(rating);
 	};
 
 	const textStyle = {
