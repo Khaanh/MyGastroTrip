@@ -9,6 +9,7 @@ import ModalDialog from "../components/ModalDialog";
 
 export default function Homepage() {
 	const [selectedCity, setSelectedCity] = useState();
+	const [infoModalIsOpen, setInfoModalIsOpen] = useState(false);
 
 	const handleSelect = (location) => {
 		setSelectedCity(location);
@@ -36,13 +37,17 @@ export default function Homepage() {
 				maxRating={5}
 				message={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
 			/>
-			<ModalDialog>
-				<h2>
+
+			<button isOpen={infoModalIsOpen}>Open Modal</button>
+
+			<ModalDialog isOpen={infoModalIsOpen}>
+				<h1>Lorem, ipsum dolor.</h1>
+				<p>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora,
 					debitis amet nam, soluta delectus aperiam hic, quae nobis rem culpa
 					qui quaerat. Porro magnam placeat dolores vitae officiis modi
 					voluptatem.
-				</h2>
+				</p>
 			</ModalDialog>
 			<CafeList selectedCity={selectedCity} />
 		</div>
