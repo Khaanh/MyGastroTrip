@@ -23,22 +23,8 @@ export default function Homepage() {
 				<button className={styles.btnCTA}>
 					<Link to="app">Want to add a new spot ?</Link>
 				</button>
+				<button isOpen={infoModalIsOpen}>Open Modal</button>
 			</main>
-			{/* <h1>Home page</h1> */}
-
-			{/* <CityList handleSelect={handleSelect} />
-			<h1>{selectedCity}</h1>
-			<CafeList selectedCity={selectedCity} /> */}
-			<CityList handleSelect={handleSelect} />
-			{selectedCity}
-
-			<StarRating maxRating={5} />
-			<StarRating
-				maxRating={5}
-				message={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
-			/>
-
-			<button isOpen={infoModalIsOpen}>Open Modal</button>
 
 			<ModalDialog isOpen={infoModalIsOpen}>
 				<h1>Lorem, ipsum dolor.</h1>
@@ -49,7 +35,6 @@ export default function Homepage() {
 					voluptatem.
 				</p>
 			</ModalDialog>
-			<CafeList selectedCity={selectedCity} />
 		</div>
 	);
 }
