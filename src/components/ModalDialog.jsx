@@ -1,10 +1,7 @@
 import { X } from "lucide-react";
 import styles from "./ModalDialog.module.css";
 
-export default function ModalDialog({ isOpen, children }) {
-	const handleClose = () => {
-		console.log("sadas");
-	};
+export default function ModalDialog({ isOpen, onClose, children }) {
 	return (
 		<>
 			{isOpen && (
@@ -13,7 +10,7 @@ export default function ModalDialog({ isOpen, children }) {
 						<div className={styles.modalContent}>
 							<button
 								className={styles.modalCloseBtn}
-								onClick={() => handleClose()}
+								onClick={() => onClose(isOpen)}
 							>
 								<X size={28} />
 							</button>
