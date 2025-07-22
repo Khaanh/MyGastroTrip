@@ -22,3 +22,14 @@ export default function ModalDialog({ isOpen, onClose, children }) {
 		</>
 	);
 }
+/**
+ * 
+const [modalDefaultIsOpen, setModalDefaultIsOpen] = useState(false);
+const handleModalDefaultClose = () => {
+	setModalDefaultIsOpen((curState) => !curState);
+};
+
+<ModalDialog isOpen={modalDefaultIsOpen} onClose={handleModalDefaultClose}>
+	<p>Some text</p>
+</ModalDialog>;
+*/
