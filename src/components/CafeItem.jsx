@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./CafeItem.module.css";
-import StarRating from "./StarRating";
 import TextExpander from "./TextExpander";
 
 export default function CafeItem({ cafe }) {
