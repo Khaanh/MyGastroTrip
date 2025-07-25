@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import CafeList from "../components/CafeList";
-import CityList from "../components/CityList";
 import PageNav from "../components/PageNav";
-import StarRating from "../components/StarRating";
 import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
 import ModalDialog from "../components/ModalDialog";

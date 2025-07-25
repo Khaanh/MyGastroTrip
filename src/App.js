@@ -1,13 +1,7 @@
 // import ListOfCards from "./components/ListOfCards/ListOfCards";
 // import ListOfCities from "./components/ListOfCities/ListOfCities";
 // import SingleCard from "./components/SingleCard/SingleCard";
-import {
-	BrowserRouter,
-	Route,
-	Router,
-	Routes,
-	Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
@@ -92,15 +86,6 @@ const listOfCities = [
 	"Stuttgart",
 	"London",
 ];
-
-// const random = Array.from({ length: 10 }, (_, i) => {
-// 	return i + 1;
-// });
-// console.log(random);
-
-const random = Array.from({ length: 15 }, (_, i) => {
-	return i + 1;
-});
 
 function App() {
 	return (

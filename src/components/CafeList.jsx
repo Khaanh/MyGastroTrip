@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import CafeItem from "./CafeItem";
 import styles from "./CafeList.module.css";
+import CityList from "./CityList";
 
 const cafeList = [
 	{
@@ -81,6 +82,7 @@ const cafeList = [
 export default function CafeList({ selectedCity }) {
 	return (
 		<>
+			<CityList />
 			<ul className={styles.List}>
 				{selectedCity
 					? cafeList
