@@ -30,9 +30,11 @@ export default function StarRating({
 
 	const textStyle = {
 		lineHeight: 1,
-		margin: 0,
+		margin: "0 2px",
 		color,
 		fontSize: `${size / 1.5}px`,
+		minWidth: "24px",
+		textAlign: "center",
 	};
 
 	const mainStyle = {

@@ -21,15 +21,16 @@ const cafeList = [
 		title: "Man vs Machine",
 		desc: "ABOUT MVSM Man vs Machine is a Specialty Coffee Roaster founded in 2014. We are 100% independent from day one. No investors. Just us. We don’t do Robusta. We roast nothing but the highest grade Arabica Coffees (Specialty Grade >80pts.) Our main focus, always is and always will be quality before growth. We are happy to work with some of the finest intl. cafes and bars in the UK, EU and the UAE amongst others. Our coffee is also served in several Michelin starred restaurants and other quality driven places, like offices, restaurants and cafes.",
 		rating: 5,
-		geo: "https://www.google.com/maps?hl=ru&gl=de&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x479ddf5e115d6107:0xebd22248be182933",
+		geo: "https://maps.app.goo.gl/cmduKWMXraRLwbdY6",
 		location: "Munich",
 		address: "Müllerstraße 23",
 		phone: faker.phone.number({ style: "human" }),
 		visited: true,
+		// time: faker.date.betweens
 	},
 	{
 		id: 2,
-		img: "/img/romiani-03.jpg",
+		img: "/img/roma.jpg",
 		title: "Romiani",
 		desc: "Willkommen bei Romiani Pastry in Frankfurt am Main, wo jeder Bissen eine Geschichte von Liebe und Handwerkskunst erzählt. Unsere exquisiten Gebäckstücke sind darauf ausgelegt, Ihre Sinne zu erfreuen, gefertigt aus Zutaten höchster Qualität und hausgemachten Rezepten, die über Generationen weitergegeben wurden. Jede Kreation wird mit Leidenschaft und Hingabe gemacht, um ein außergewöhnliches Erlebnis zu gewährleisten, das Sie in eine Welt des Genusses und der Tradition entführt. Bei Romiani glauben wir an die Kunst des Backens, bei der jedes Gebäck ein Meisterwerk ist, das von Herzen kommt, um Freude auf Ihren Tisch zu bringen. Entdecken Sie den Geschmack von echter Fürsorge und kulinarischer Exzellenz mit Romiani Pastry und lassen Sie uns Ihre Momente wirklich besonders machen. ꞉)",
 		rating: 5,
