@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker";
 import CafeItem from "./CafeItem";
 import styles from "./CafeList.module.css";
 import CityList from "./CityList";
+import { useState } from "react";
 
 const cafeList = [
 	{
@@ -79,17 +80,37 @@ const cafeList = [
 	},
 ];
 
-export default function CafeList({ selectedCity }) {
+export default function CafeList() {
+	const [selectedCity, setSelectedCity] = useState();
+	const handleSelect = (location) => {
+		setSelectedCity(location);
+	};
+
 	return (
 		<>
-			<CityList />
+			<CityList onSelectCity={handleSelect} />
 			<ul className={styles.List}>
 				{selectedCity
 					? cafeList
 							.filter((cafe) => cafe.location === selectedCity)
-							.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />) //?
+							.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />)
 					: cafeList.map((cafe) => <CafeItem cafe={cafe} key={cafe.id} />)}
 			</ul>
+
+			{/* const filteredCafes = selectedCity
+		? cafeList.filter((cafe) => cafe.location === selectedCity)
+		: cafeList;
+
+	return (
+		<>
+			<CityList onSelectCity={handleSelect} />
+			<ul className={styles.List}>
+				{filteredCafes.map((cafe) => (
+					<CafeItem cafe={cafe} key={cafe.id} />
+				))}
+			</ul>
+		</>
+	); */}
 		</>
 	);
 }

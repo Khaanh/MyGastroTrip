@@ -20,7 +20,7 @@ const listOfCities = Array.from(
 	])
 );
 
-export default function CityList({ handleSelect }) {
+export default function CityList({ onSelectCity }) {
 	if (!listOfCities.length) {
 		return <Message message={"Add your first city by clicking on the map"} />;
 	}
@@ -28,13 +28,13 @@ export default function CityList({ handleSelect }) {
 		<ul className={styles.list}>
 			{/* // Button component to select all cities that will reset the filter */}
 			<li>
-				<button className={styles.btn} onClick={() => handleSelect(false)}>
+				<button className={styles.btn} onClick={() => onSelectCity(false)}>
 					All
 				</button>
 			</li>
 
 			{listOfCities.map((city) => (
-				<CityItem city={city} key={city} handleSelect={handleSelect} />
+				<CityItem city={city} key={city} onSelectCity={onSelectCity} />
 			))}
 		</ul>
 	);

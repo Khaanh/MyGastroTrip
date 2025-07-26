@@ -5,7 +5,7 @@ import styles from "./Homepage.module.css";
 import ModalDialog from "../components/ModalDialog";
 
 export default function Homepage() {
-	const [selectedCity, setSelectedCity] = useState();
+	// const [selectedCity, setSelectedCity] = useState();
 
 	const [modalDefaultIsOpen, setModalDefaultIsOpen] = useState(false);
 
@@ -19,9 +19,9 @@ export default function Homepage() {
 			: document.body.classList.remove("fixed");
 	}, [modalDefaultIsOpen]);
 
-	const handleSelect = (location) => {
-		setSelectedCity(location);
-	};
+	// const handleSelect = (location) => {
+	// 	setSelectedCity(location);
+	// };
 
 	return (
 		<div>
