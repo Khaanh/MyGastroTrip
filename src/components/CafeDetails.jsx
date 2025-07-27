@@ -1,8 +1,8 @@
 import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./CafeDetails.module.css";
-// import StarRating from "./StarRating";
 import AsideRating from "./AsideRating";
 import Contacts from "./Contacts";
+import { useState } from "react";
 
 export default function CafeDetails() {
 	const { id } = useParams();
@@ -14,11 +14,30 @@ export default function CafeDetails() {
 	const address = searchParam.get("address");
 	const location = searchParam.get("location");
 
+	const [time, setTime] = useState(new Date());
+	const weekDays = [
+		"Sunday",
+		"Saturday",
+		"Friday",
+		"Thursday",
+		"Wednesday",
+		"Tuesday",
+		"Monday",
+	];
+
 	return (
 		<main>
 			<h1 className={styles.title}>{title}</h1>
-
 			<Contacts geo={geo} phone={phone} />
+			{time.getHours()} : {time.getMinutes()} : {time.getSeconds()}
+			<br />
+			{weekDays[time.getDay()]}
+			<br />
+			{time.getDate()}
+			<br />
+			{time.getMonth() + 1}
+			<br />
+			{time.getFullYear()}
 			{/* TODO: Open modal window with working hours */}
 			<div>
 				Mon 08:00–19:00
@@ -35,33 +54,11 @@ export default function CafeDetails() {
 				<br />
 				Sun 09:00–19:00
 			</div>
-
 			<div className={styles.wrapper}>
 				<div className={styles.intro}>
 					<div className={styles.desc}>
 						<p>{desc}</p>
 					</div>
-					{/* <div>
-						среда 08:00–19:00 четверг 08:00–19:00 пятница 08:00–19:00 суббота
-						09:00–19:00 воскресенье 09:00–19:00 понедельник 08:00–19:00 вторник
-						08:00–19:00
-					</div>
-					<div>
-						среда 10:00–18:30 четверг 10:00–18:30 пятница 10:00–18:30 суббота
-						10:00–16:00 воскресенье Закрыто понедельник Закрыто вторник
-						10:00–18:30
-					</div>
-					<div>
-						среда 09:30–20:00 четверг 09:30–20:00 пятница 09:30–21:00 суббота
-						09:30–21:00 воскресенье 10:00–18:00 понедельник 09:30–20:00 вторник
-						09:30–20:00
-					</div>
-					<div>
-						среда 10:00–20:00 четверг 10:00–20:00 пятница 10:00–20:00 суббота
-						10:00–20:00 воскресенье 10:00–20:00 понедельник 12:00–20:00 вторник
-						10:00–20:00
-					</div> */}
-
 					<AsideRating />
 				</div>
 			</div>
