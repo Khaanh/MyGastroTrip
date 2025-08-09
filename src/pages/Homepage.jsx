@@ -3,22 +3,11 @@ import PageNav from "../components/PageNav";
 import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
 import ModalDialog from "../components/ModalDialog";
-import { animated, useSpring } from "@react-spring/web";
 
 export default function Homepage() {
 	// const [selectedCity, setSelectedCity] = useState();
 
 	const [modalDefaultIsOpen, setModalDefaultIsOpen] = useState(false);
-	const AnimatedModalDialog = animated(ModalDialog);
-
-	const styled = useSpring({
-		from: {
-			opacity: 0,
-		},
-		to: {
-			opacity: 1,
-		},
-	});
 
 	const handleModalDefaultClose = () => {
 		setModalDefaultIsOpen((curState) => !curState);
@@ -48,9 +37,9 @@ export default function Homepage() {
 				</button>
 			</main>
 
-			<AnimatedModalDialog style={styled} />
+			{/* <AnimatedModalDialog style={styled} /> */}
 
-			{/* <ModalDialog
+			<ModalDialog
 				isOpen={modalDefaultIsOpen}
 				onClose={handleModalDefaultClose}
 			>
@@ -61,7 +50,7 @@ export default function Homepage() {
 					qui quaerat. Porro magnam placeat dolores vitae officiis modi
 					voluptatem.
 				</p>
-			</ModalDialog> */}
+			</ModalDialog>
 		</div>
 	);
 }

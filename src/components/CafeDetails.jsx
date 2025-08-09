@@ -29,31 +29,7 @@ export default function CafeDetails() {
 		<main>
 			<h1 className={styles.title}>{title}</h1>
 			<Contacts geo={geo} phone={phone} />
-			{time.getHours()} : {time.getMinutes()} : {time.getSeconds()}
-			<br />
-			{weekDays[time.getDay()]}
-			<br />
-			{time.getDate()}
-			<br />
-			{time.getMonth() + 1}
-			<br />
-			{time.getFullYear()}
-			{/* TODO: Open modal window with working hours */}
-			<div>
-				Mon 08:00–19:00
-				<br />
-				Tue 08:00–19:00
-				<br />
-				Wed 08:00–19:00
-				<br />
-				Thu 08:00–19:00
-				<br />
-				Fri 08:00–19:00
-				<br />
-				Sat 09:00–19:00
-				<br />
-				Sun 09:00–19:00
-			</div>
+
 			<div className={styles.wrapper}>
 				<div className={styles.intro}>
 					<div className={styles.desc}>

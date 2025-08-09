@@ -17,19 +17,6 @@
 import { X } from "lucide-react";
 import styles from "./ModalDialog.module.css";
 
-// const [modalDefaultIsOpen, setModalDefaultIsOpen] = useState(false);
-// const handleModalDefaultClose = () => {
-// 	setModalDefaultIsOpen((curState) => !curState);
-// };
-
-// <button onClick={() => handleModalDefaultClose(modalDefaultIsOpen)}>
-// 			Open Modal
-// 		</button>
-
-// <ModalDialog isOpen={modalDefaultIsOpen} onClose={handleModalDefaultClose}>
-// 	<p>Some text</p>
-// </ModalDialog>;
-
 export default function ModalDialog({ isOpen, onClose, children }) {
 	return (
 		<>
